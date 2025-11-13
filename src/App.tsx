@@ -52,14 +52,40 @@ function App() {
     });
   }, [data, searchTerm, levelFilter]);
 
-  const stats = {
-    totalHouse: filteredData.find(d => d.Level === 'Summary' && d.Department_Name === 'TOTAL_NEW_APPROPRIATIONS')?.House || 0,
-    totalSenate: filteredData.find(d => d.Level === 'Summary' && d.Department_Name === 'TOTAL_NEW_APPROPRIATIONS')?.Senate || 0,
-    totalIncrease: filteredData.find(d => d.Level === 'Summary' && d.Department_Name === 'TOTAL_NEW_APPROPRIATIONS')?.Increase || 0,
-    totalDecrease: filteredData.find(d => d.Level === 'Summary' && d.Department_Name === 'TOTAL_NEW_APPROPRIATIONS')?.Decrease || 0,
-    departmentCount: filteredData.filter(d => d.Level === 'Department').length,
-    agencyCount: filteredData.filter(d => d.Level === 'Agency').length,
-  };
+  const stats = useMemo(() => {
+    // If we have the Summary level in filtered data, use it
+    const summaryRow = filteredData.find(d => d.Level === 'Summary' && d.Department_Name === 'TOTAL_NEW_APPROPRIATIONS');
+    
+    // Otherwise, compute totals from filtered data
+    if (!summaryRow) {
+      const totals = filteredData.reduce((acc, row) => {
+        // Only sum the actual budget entries (not summary rows)
+        if (row.Level !== 'Summary') {
+          acc.totalHouse += row.House || 0;
+          acc.totalSenate += row.Senate || 0;
+          acc.totalIncrease += row.Increase || 0;
+          acc.totalDecrease += row.Decrease || 0;
+        }
+        return acc;
+      }, { totalHouse: 0, totalSenate: 0, totalIncrease: 0, totalDecrease: 0 });
+      
+      return {
+        ...totals,
+        departmentCount: filteredData.filter(d => d.Level === 'Department').length,
+        agencyCount: filteredData.filter(d => d.Level === 'Agency').length,
+      };
+    }
+    
+    // Use summary row values
+    return {
+      totalHouse: summaryRow.House || 0,
+      totalSenate: summaryRow.Senate || 0,
+      totalIncrease: summaryRow.Increase || 0,
+      totalDecrease: summaryRow.Decrease || 0,
+      departmentCount: filteredData.filter(d => d.Level === 'Department').length,
+      agencyCount: filteredData.filter(d => d.Level === 'Agency').length,
+    };
+  }, [filteredData]);
 
   const downloadCSV = () => {
     const csv = Papa.unparse(filteredData);
