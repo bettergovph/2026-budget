@@ -139,7 +139,7 @@ function App() {
         </div>
 
         {/* Grand Totals Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-4 hidden">
           <Card className="border-blue-200 hover:shadow-md transition-shadow">
             <CardHeader className="pb-3">
               <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - Senate</CardDescription>
