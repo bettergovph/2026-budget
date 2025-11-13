@@ -28,6 +28,7 @@ export function AgencyCharts({ data }: AgencyChartsProps) {
     const agencies = data.filter(d => d.Level === 'Agency' && d.Net !== 0);
     return agencies
       .sort((a, b) => Math.abs(b.Net) - Math.abs(a.Net))
+      .slice(0, 50)
       .map(a => ({
         name: a.Agency_Name.length > 35 ? a.Agency_Name.substring(0, 35) + '...' : a.Agency_Name,
         fullName: a.Agency_Name,
@@ -83,9 +84,9 @@ export function AgencyCharts({ data }: AgencyChartsProps) {
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
             <TrendingUp className="w-5 h-5 text-green-600" />
-            Agencies by Budget Change ({topAgenciesByChange.length} with changes)
+            Agencies by Budget Change (Top 50 of {data.filter(d => d.Level === 'Agency' && d.Net !== 0).length})
           </CardTitle>
-          <CardDescription>All agencies with budget changes</CardDescription>
+          <CardDescription>Top 50 agencies with largest budget changes</CardDescription>
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={Math.max(500, topAgenciesByChange.length * 30)}>
