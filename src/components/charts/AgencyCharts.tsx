@@ -12,31 +12,55 @@ interface AgencyChartsProps {
 export function AgencyCharts({ data }: AgencyChartsProps) {
   const agencyData = useMemo(() => {
     const agencies = data.filter(d => d.Level === 'Agency');
-    return agencies
+    // Group by unique key (Department Code + Agency Code) to handle duplicate agency names
+    const uniqueAgencies = new Map<string, BudgetData>();
+    agencies.forEach(agency => {
+      const key = `${agency.Department_Code}-${agency.Agency_Code}`;
+      uniqueAgencies.set(key, agency);
+    });
+
+    return Array.from(uniqueAgencies.values())
       .sort((a, b) => b.Senate - a.Senate)
-      .map(a => ({
-        name: a.Agency_Name.length > 35 ? a.Agency_Name.substring(0, 35) + '...' : a.Agency_Name,
-        fullName: a.Agency_Name,
-        department: a.Department_Name,
-        senate: a.Senate,
-        house: a.House,
-        net: a.Net,
-      }));
+      .map(a => {
+        // Add department abbreviation to agency name for uniqueness
+        const deptAbbrev = a.Department_Name.substring(0, 15);
+        const displayName = `${a.Agency_Name} (${deptAbbrev})`;
+        return {
+          name: displayName.length > 50 ? displayName.substring(0, 50) + '...' : displayName,
+          fullName: `${a.Agency_Name} - ${a.Department_Name}`,
+          department: a.Department_Name,
+          senate: a.Senate,
+          house: a.House,
+          net: a.Net,
+        };
+      });
   }, [data]);
 
   const topAgenciesByChange = useMemo(() => {
     const agencies = data.filter(d => d.Level === 'Agency' && d.Net !== 0);
-    return agencies
+    // Group by unique key (Department Code + Agency Code) to handle duplicate agency names
+    const uniqueAgencies = new Map<string, BudgetData>();
+    agencies.forEach(agency => {
+      const key = `${agency.Department_Code}-${agency.Agency_Code}`;
+      uniqueAgencies.set(key, agency);
+    });
+
+    return Array.from(uniqueAgencies.values())
       .sort((a, b) => Math.abs(b.Net) - Math.abs(a.Net))
       .slice(0, 50)
-      .map(a => ({
-        name: a.Agency_Name.length > 35 ? a.Agency_Name.substring(0, 35) + '...' : a.Agency_Name,
-        fullName: a.Agency_Name,
-        department: a.Department_Name,
-        net: a.Net,
-        increase: a.Increase,
-        decrease: Math.abs(a.Decrease),
-      }));
+      .map(a => {
+        // Add department abbreviation to agency name for uniqueness
+        const deptAbbrev = a.Department_Name.substring(0, 15);
+        const displayName = `${a.Agency_Name} (${deptAbbrev})`;
+        return {
+          name: displayName.length > 50 ? displayName.substring(0, 50) + '...' : displayName,
+          fullName: `${a.Agency_Name} - ${a.Department_Name}`,
+          department: a.Department_Name,
+          net: a.Net,
+          increase: a.Increase,
+          decrease: Math.abs(a.Decrease),
+        };
+      });
   }, [data]);
 
   const CustomTooltip = ({ active, payload, label }: any) => {
