@@ -74,10 +74,10 @@ function App() {
   }
 
   return (
-    <div className="min-w-screen min-h-screen bg-white text-black scheme-light">
+    <div className="min-w-screen min-h-screen bg-gray-50 text-black">
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white sticky top-0 z-10 shadow-sm">
-        <div className="max-w-full px-6 py-4">
+      <header className="border-b border-gray-100 bg-white sticky top-0 z-10">
+        <div className="max-w-full px-8 py-6">
           <div className="flex items-center justify-start mb-4 gap-6">
             <div>
               <h1 className="text-2xl font-bold tracking-tight">FY 2026 GAB Dashboard</h1>
@@ -133,7 +133,8 @@ function App() {
                   setSearchTerm('');
                   setLevelFilter('');
                 }}
-                className="text-sm px-3 py-2 text-gray-600 hover:text-gray-900 whitespace-nowrap"
+                className="text-xs bg-none px-3 py-2 text-black hover:text-black/80 whitespace-nowrap"
+                style={{ background: 'none' }}
               >
                 Clear Filters
               </button>
@@ -143,7 +144,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-full px-6 py-6">
+      <main className="max-w-full px-8 py-8">
         {/* Filter Info */}
         {(searchTerm || levelFilter) && (
           <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
@@ -156,46 +157,61 @@ function App() {
         )}
 
         {/* Stats Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardDescription>Total Senate Appropriations</CardDescription>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+          <Card className="border-gray-100 hover:shadow-md transition-shadow">
+            <CardHeader className="pb-3">
+              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Senate Appropriations</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">₱{formatCurrency(stats.totalSenate * 1000)}</div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="pb-2">
-              <CardDescription>Total House Appropriations</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">₱{formatCurrency(stats.totalHouse * 1000)}</div>
-            </CardContent>
-          </Card>
-
-
-          <Card>
-            <CardHeader className="pb-2">
-              <CardDescription>Total Increases</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-green-600 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5" />
-                ₱{formatCurrency(stats.totalIncrease * 1000)}
+              <div className="text-3xl font-bold text-gray-900">₱{formatCurrency(stats.totalSenate * 1000)}</div>
+              <div className="mt-2 flex items-center text-sm">
+                <span className="text-blue-600 font-medium">+0.0%</span>
+                <span className="text-gray-500 ml-2">vs last period</span>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader className="pb-2">
-              <CardDescription>Total Decreases</CardDescription>
+          <Card className="border-gray-100 hover:shadow-md transition-shadow">
+            <CardHeader className="pb-3">
+              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total House Appropriations</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-red-600 flex items-center gap-2">
-                <TrendingDown className="w-5 h-5" />
+              <div className="text-3xl font-bold text-gray-900">₱{formatCurrency(stats.totalHouse * 1000)}</div>
+              <div className="mt-2 flex items-center text-sm">
+                <span className="text-blue-600 font-medium">+0.0%</span>
+                <span className="text-gray-500 ml-2">vs last period</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-gray-100 hover:shadow-md transition-shadow">
+            <CardHeader className="pb-3">
+              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Increases</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-bold text-green-600 flex items-center gap-2">
+                <TrendingUp className="w-6 h-6" />
+                ₱{formatCurrency(stats.totalIncrease * 1000)}
+              </div>
+              <div className="mt-2 flex items-center text-sm">
+                <span className="text-green-600 font-medium">Positive</span>
+                <span className="text-gray-500 ml-2">budget increase</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-gray-100 hover:shadow-md transition-shadow">
+            <CardHeader className="pb-3">
+              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Decreases</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-bold text-red-600 flex items-center gap-2">
+                <TrendingDown className="w-6 h-6" />
                 ₱{formatCurrency(Math.abs(stats.totalDecrease) * 1000)}
+              </div>
+              <div className="mt-2 flex items-center text-sm">
+                <span className="text-red-600 font-medium">Negative</span>
+                <span className="text-gray-500 ml-2">budget decrease</span>
               </div>
             </CardContent>
           </Card>
@@ -205,7 +221,7 @@ function App() {
         {viewMode === 'dashboard' ? (
           <Charts data={filteredData} />
         ) : (
-          <Card>
+          <Card className="border-gray-100 shadow-sm">
             <CardHeader>
               <CardTitle>Budget Data Table</CardTitle>
               <CardDescription>

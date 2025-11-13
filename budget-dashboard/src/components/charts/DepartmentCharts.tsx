@@ -105,7 +105,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
     <div className="space-y-6">
       {/* Main Overview Section */}
       <div className="grid lg:grid-cols-3 gap-6">
-        <Card className="lg:col-span-2">
+        <Card className="lg:col-span-2 border-gray-100 shadow-sm">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Building2 className="w-5 h-5" />
@@ -136,7 +136,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="border-gray-100 shadow-sm">
           <CardHeader>
             <CardTitle className="text-lg">Budget Distribution</CardTitle>
             <CardDescription>Top 8 departments by allocation</CardDescription>
@@ -167,13 +167,13 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
 
       {/* Selected Department Agencies */}
       {selectedDept && departmentAgencies.length > 0 && (
-        <Card className="border-2 border-blue-500">
+        <Card className="border-2 border-blue-200 shadow-md bg-blue-50/30">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
               Agencies in Selected Department ({departmentAgencies.length} total)
               <button
                 onClick={() => setSelectedDept(null)}
-                className="ml-auto text-sm px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md"
+                className="ml-auto text-sm px-3 py-1 bg-white hover:bg-gray-50 border border-gray-200 rounded-md transition-colors"
               >
                 Clear Selection
               </button>
@@ -200,7 +200,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
 
       {/* Budget Changes Analysis */}
       <div className="grid lg:grid-cols-2 gap-6">
-        <Card>
+        <Card className="border-gray-100 shadow-sm">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
               <TrendingDown className="w-5 h-5 text-red-600" />
@@ -223,7 +223,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="border-gray-100 shadow-sm">
           <CardHeader>
             <CardTitle className="text-lg">Net Change Trend</CardTitle>
             <CardDescription>Net budget changes across all departments</CardDescription>
@@ -243,7 +243,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
       </div>
 
       {/* Comparative Analysis */}
-      <Card>
+      <Card className="border-gray-100 shadow-sm">
         <CardHeader>
           <CardTitle className="text-lg">House vs Senate Allocation Comparison</CardTitle>
           <CardDescription>Line comparison of all {departmentData.length} departments</CardDescription>

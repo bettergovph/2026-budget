@@ -86,7 +86,7 @@ export function Charts({ data }: ChartsProps) {
 
     return (
       <div className="space-y-6">
-        <Card>
+        <Card className="border-gray-100 shadow-sm">
           <CardHeader>
             <CardTitle>All Sub-Agencies ({subAgencyData.length} total)</CardTitle>
             <CardDescription>Sub-agency budget allocations</CardDescription>

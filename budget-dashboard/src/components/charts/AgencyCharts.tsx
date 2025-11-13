@@ -58,7 +58,7 @@ export function AgencyCharts({ data }: AgencyChartsProps) {
   return (
     <div className="space-y-6">
       {/* Agencies Overview */}
-      <Card>
+      <Card className="border-gray-100 shadow-sm">
         <CardHeader>
           <CardTitle className="text-lg">All Agencies by Budget ({agencyData.length} total)</CardTitle>
           <CardDescription>Agency appropriations across all departments</CardDescription>
@@ -79,7 +79,7 @@ export function AgencyCharts({ data }: AgencyChartsProps) {
       </Card>
 
       {/* Agency Changes */}
-      <Card>
+      <Card className="border-gray-100 shadow-sm">
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
             <TrendingUp className="w-5 h-5 text-green-600" />
