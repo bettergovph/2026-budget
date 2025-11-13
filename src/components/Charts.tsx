@@ -114,7 +114,7 @@ export function Charts({ data }: ChartsProps) {
     <div className="space-y-6">
       {/* Key Metrics Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-l-4 border-l-blue-500">
+        <Card>
           <CardHeader className="pb-2">
             <CardDescription className="text-xs font-medium">Departments</CardDescription>
           </CardHeader>
@@ -122,7 +122,7 @@ export function Charts({ data }: ChartsProps) {
             <div className="text-3xl font-bold">{stats.departmentCount}</div>
           </CardContent>
         </Card>
-        <Card className="border-l-4 border-l-purple-500">
+        <Card>
           <CardHeader className="pb-2">
             <CardDescription className="text-xs font-medium">Agencies</CardDescription>
           </CardHeader>
@@ -130,7 +130,7 @@ export function Charts({ data }: ChartsProps) {
             <div className="text-3xl font-bold">{stats.agencyCount}</div>
           </CardContent>
         </Card>
-        <Card className="border-l-4 border-l-green-500">
+        <Card>
           <CardHeader className="pb-2">
             <CardDescription className="text-xs font-medium">Sub-Agencies</CardDescription>
           </CardHeader>
@@ -138,7 +138,7 @@ export function Charts({ data }: ChartsProps) {
             <div className="text-3xl font-bold">{stats.subAgencyCount}</div>
           </CardContent>
         </Card>
-        <Card className="border-l-4 border-l-orange-500">
+        <Card>
           <CardHeader className="pb-2">
             <CardDescription className="text-xs font-medium">Total Records</CardDescription>
           </CardHeader>

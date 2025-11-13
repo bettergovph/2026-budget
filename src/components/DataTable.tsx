@@ -191,8 +191,8 @@ export function DataTable({ data }: DataTableProps) {
               <TableHead className="w-12"></TableHead>
               <TableHead>Department / Agency / Sub-Agency</TableHead>
               <TableHead className="text-right">House</TableHead>
-              <TableHead className="text-right">Increase</TableHead>
-              <TableHead className="text-right">Decrease</TableHead>
+              <TableHead className="text-right">Increased by Senate</TableHead>
+              <TableHead className="text-right">Decreased by Senate</TableHead>
               <TableHead className="text-right">Net</TableHead>
               <TableHead className="text-right">Senate</TableHead>
             </TableRow>
