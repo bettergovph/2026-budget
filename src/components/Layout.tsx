@@ -51,8 +51,8 @@ export function Layout({
                 <Link
                   to="/"
                   className={`text-sm font-medium transition-colors ${location.pathname === '/'
-                      ? 'text-blue-600 underline'
-                      : 'text-gray-600 hover:text-gray-900 hover:underline'
+                    ? 'text-blue-600 underline'
+                    : 'text-gray-600 hover:text-gray-900 hover:underline'
                     }`}
                 >
                   Overview
@@ -60,8 +60,8 @@ export function Layout({
                 <Link
                   to="/table"
                   className={`text-sm font-medium transition-colors ${location.pathname === '/table'
-                      ? 'text-blue-600 underline'
-                      : 'text-gray-600 hover:text-gray-900 hover:underline'
+                    ? 'text-blue-600 underline'
+                    : 'text-gray-600 hover:text-gray-900 hover:underline'
                     }`}
                 >
                   Table View
@@ -97,7 +97,8 @@ export function Layout({
           </div>
 
           {/* Filters */}
-          <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center mt-4">
+          <div className="flex flex-col gap-4 mt-4">
+            {/* Search Bar */}
             <div className="flex items-center gap-2 flex-1">
               <Filter className="w-4 h-4 text-gray-500 flex-shrink-0" />
               <div className="relative flex-1">
@@ -109,30 +110,43 @@ export function Layout({
                   className="pl-9"
                 />
               </div>
+              {(searchTerm || levelFilter) && (
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setLevelFilter('');
+                  }}
+                  className="text-xs px-3 py-2 text-black hover:text-black/80 whitespace-nowrap"
+                >
+                  Clear Filters
+                </button>
+              )}
             </div>
-            <select
-              value={levelFilter}
-              onChange={(e) => setLevelFilter(e.target.value)}
-              className="h-10 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm w-full sm:w-auto sm:min-w-[160px]"
-            >
-              <option value="">All Levels</option>
-              {uniqueLevels.map((level) => (
-                <option key={level} value={level}>
-                  {level}
-                </option>
-              ))}
-            </select>
-            {(searchTerm || levelFilter) && (
+
+            {/* Level Filter Pills */}
+            <div className="flex flex-wrap gap-2">
               <button
-                onClick={() => {
-                  setSearchTerm('');
-                  setLevelFilter('');
-                }}
-                className="text-xs px-3 py-2 text-black hover:text-black/80 whitespace-nowrap self-start sm:self-center"
+                onClick={() => setLevelFilter('')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${!levelFilter
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
               >
-                Clear Filters
+                All Levels
               </button>
-            )}
+              {uniqueLevels.map((level) => (
+                <button
+                  key={level}
+                  onClick={() => setLevelFilter(level)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${levelFilter === level
+                    ? 'bg-blue-600 text-white shadow-sm font-bold border border-blue-600'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                >
+                  {level}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </header>
