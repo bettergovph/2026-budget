@@ -81,21 +81,21 @@ export function AgencyCharts({ data }: AgencyChartsProps) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Agencies Overview */}
       <Card className="border-gray-100 shadow-sm">
-        <CardHeader>
-          <CardTitle className="text-lg">All Agencies by Budget ({agencyData.length} total)</CardTitle>
-          <CardDescription>Agency appropriations across all departments</CardDescription>
+        <CardHeader className="p-3 sm:p-6">
+          <CardTitle className="text-base sm:text-lg">All Agencies by Budget ({agencyData.length} total)</CardTitle>
+          <CardDescription className="text-xs sm:text-sm">Agency appropriations across all departments</CardDescription>
         </CardHeader>
-        <CardContent>
-          <ResponsiveContainer width="100%" height={Math.max(500, agencyData.length * 25)}>
+        <CardContent className="p-2 sm:p-6">
+          <ResponsiveContainer width="100%" height={Math.max(400, agencyData.length * 20)}>
             <BarChart data={agencyData} layout="vertical">
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" horizontal={false} />
-              <XAxis type="number" tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 10 }} />
-              <YAxis dataKey="name" type="category" width={250} tick={{ fontSize: 9 }} />
+              <XAxis type="number" tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 8 }} />
+              <YAxis dataKey="name" type="category" width={180} tick={{ fontSize: 7 }} />
               <Tooltip content={<CustomTooltip />} />
-              <Legend wrapperStyle={{ fontSize: '12px' }} />
+              <Legend wrapperStyle={{ fontSize: '10px' }} />
               <Bar dataKey="house" fill="#3b82f6" radius={[0, 4, 4, 0]} name="House" />
               <Bar dataKey="senate" fill="#6366f1" radius={[0, 4, 4, 0]} name="Senate" />
             </BarChart>
@@ -105,21 +105,21 @@ export function AgencyCharts({ data }: AgencyChartsProps) {
 
       {/* Agency Changes */}
       <Card className="border-gray-100 shadow-sm">
-        <CardHeader>
-          <CardTitle className="text-lg flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-green-600" />
+        <CardHeader className="p-3 sm:p-6">
+          <CardTitle className="text-base sm:text-lg flex items-center gap-2">
+            <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
             Agencies by Budget Change (Top 50 of {data.filter(d => d.Level === 'Agency' && d.Net !== 0).length})
           </CardTitle>
-          <CardDescription>Top 50 agencies with largest budget changes</CardDescription>
+          <CardDescription className="text-xs sm:text-sm">Top 50 agencies with largest budget changes</CardDescription>
         </CardHeader>
-        <CardContent>
-          <ResponsiveContainer width="100%" height={Math.max(500, topAgenciesByChange.length * 30)}>
+        <CardContent className="p-2 sm:p-6">
+          <ResponsiveContainer width="100%" height={Math.max(400, topAgenciesByChange.length * 25)}>
             <BarChart data={topAgenciesByChange}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" vertical={false} />
-              <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(120, topAgenciesByChange.length * 4)} tick={{ fontSize: 9 }} />
-              <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 11 }} />
+              <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(100, topAgenciesByChange.length * 3)} tick={{ fontSize: 7 }} />
+              <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 9 }} />
               <Tooltip content={<CustomTooltip />} />
-              <Legend wrapperStyle={{ fontSize: '12px' }} />
+              <Legend wrapperStyle={{ fontSize: '10px' }} />
               <Bar dataKey="increase" fill="#10b981" radius={[4, 4, 0, 0]} name="Increase" />
               <Bar dataKey="decrease" fill="#ef4444" radius={[4, 4, 0, 0]} name="Decrease" />
             </BarChart>
