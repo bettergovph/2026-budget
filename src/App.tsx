@@ -142,26 +142,6 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-4">
           <Card className="border-blue-200 hover:shadow-md transition-shadow">
             <CardHeader className="pb-3">
-              <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - House</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-4xl font-bold text-blue-900">₱{formatCurrency(grandTotalHouse)}</div>
-              <div className="mt-2 flex items-center text-sm">
-                <span className="text-blue-700 font-medium">House + Automatic Appropriations</span>
-              </div>
-              <div className="mt-4 pt-4 border-t border-blue-200 space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">vs 2026 NEP:</span>
-                  <span className={`font-semibold ${grandTotalHouse - NEP_2026_TOTAL >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                    {grandTotalHouse - NEP_2026_TOTAL >= 0 ? '+' : ''}₱{formatCurrency(Math.abs(grandTotalHouse - NEP_2026_TOTAL))}
-                  </span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-blue-200 hover:shadow-md transition-shadow">
-            <CardHeader className="pb-3">
               <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - Senate</CardDescription>
             </CardHeader>
             <CardContent>
@@ -185,6 +165,28 @@ function App() {
               </div>
             </CardContent>
           </Card>
+
+          <Card className="border-blue-200 hover:shadow-md transition-shadow">
+            <CardHeader className="pb-3">
+              <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - House</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="text-4xl font-bold text-blue-900">₱{formatCurrency(grandTotalHouse)}</div>
+              <div className="mt-2 flex items-center text-sm">
+                <span className="text-blue-700 font-medium">House + Automatic Appropriations</span>
+              </div>
+              <div className="mt-4 pt-4 border-t border-blue-200 space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-600">vs 2026 NEP:</span>
+                  <span className={`font-semibold ${grandTotalHouse - NEP_2026_TOTAL >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                    {grandTotalHouse - NEP_2026_TOTAL >= 0 ? '+' : ''}₱{formatCurrency(Math.abs(grandTotalHouse - NEP_2026_TOTAL))}
+                  </span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+
           <Card className="border-blue-200 hover:shadow-md transition-shadow">
             <CardHeader className="pb-3">
               <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">NEP 2026</CardDescription>
