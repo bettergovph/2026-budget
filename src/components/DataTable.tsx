@@ -1,11 +1,8 @@
 import { useState, useMemo } from 'react';
 import { BudgetData } from '@/types/budget';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Download, Search, ChevronUp, ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { formatCurrency } from '@/lib/utils';
-import Papa from 'papaparse';
 
 interface DataTableProps {
   data: BudgetData[];
@@ -15,10 +12,6 @@ type SortKey = keyof BudgetData;
 type SortDirection = 'asc' | 'desc';
 
 export function DataTable({ data }: DataTableProps) {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [levelFilter, setLevelFilter] = useState<string>('');
-  const [sortKey, setSortKey] = useState<SortKey | null>(null);
-  const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
   const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
 
   const toggleRow = (key: string) => {
@@ -31,22 +24,9 @@ export function DataTable({ data }: DataTableProps) {
     setExpandedRows(newExpanded);
   };
 
-  const uniqueLevels = useMemo(() => {
-    return Array.from(new Set(data.map(d => d.Level)));
-  }, [data]);
-
   // Build hierarchical structure
   const hierarchicalData = useMemo(() => {
-    const filtered = data.filter(row => {
-      const matchesSearch =
-        row.Department_Name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        row.Agency_Name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        row.Sub_Agency_Name.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesLevel = !levelFilter || row.Level === levelFilter;
-      return matchesSearch && matchesLevel;
-    });
-
-    // Group by department, then agency
+    // Data is already filtered globally, so just build the structure
     const structure: {
       summary: BudgetData[];
       departments: Map<string, {
@@ -61,7 +41,7 @@ export function DataTable({ data }: DataTableProps) {
       departments: new Map(),
     };
 
-    filtered.forEach(row => {
+    data.forEach(row => {
       if (row.Level === 'Summary') {
         structure.summary.push(row);
       } else if (row.Level === 'Department' || row.Level === 'Special Purpose Fund') {
@@ -132,69 +112,21 @@ export function DataTable({ data }: DataTableProps) {
     });
 
     return structure;
-  }, [data, searchTerm, levelFilter]);
-
-  const downloadCSV = () => {
-    const csv = Papa.unparse(data.filter(row => {
-      const matchesSearch =
-        row.Department_Name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        row.Agency_Name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        row.Sub_Agency_Name.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesLevel = !levelFilter || row.Level === levelFilter;
-      return matchesSearch && matchesLevel;
-    }));
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement('a');
-    const url = URL.createObjectURL(blob);
-    link.setAttribute('href', url);
-    link.setAttribute('download', 'budget_data_filtered.csv');
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  }, [data]);
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-          <div className="relative flex-1 sm:flex-initial">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-            <Input
-              placeholder="Search departments, agencies..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-9 w-full sm:w-64"
-            />
-          </div>
-          <select
-            value={levelFilter}
-            onChange={(e) => setLevelFilter(e.target.value)}
-            className="h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
-          >
-            <option value="">All Levels</option>
-            {uniqueLevels.map(level => (
-              <option key={level} value={level}>{level}</option>
-            ))}
-          </select>
-        </div>
-        <Button onClick={downloadCSV} variant="outline">
-          <Download className="w-4 h-4 mr-2" />
-          Download CSV
-        </Button>
-      </div>
-
       <div className="rounded-md border">
         <Table>
           <TableHeader>
             <TableRow>
               <TableHead className="w-12"></TableHead>
               <TableHead>Department / Agency / Sub-Agency</TableHead>
+              <TableHead className="text-right bg-blue-50">Senate</TableHead>
               <TableHead className="text-right">House</TableHead>
               <TableHead className="text-right">Increased by Senate</TableHead>
               <TableHead className="text-right">Decreased by Senate</TableHead>
               <TableHead className="text-right">Net</TableHead>
-              <TableHead className="text-right">Senate</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -203,11 +135,11 @@ export function DataTable({ data }: DataTableProps) {
               <TableRow key={`summary-${idx}`} className="bg-blue-50 font-semibold">
                 <TableCell></TableCell>
                 <TableCell className="font-bold">{row.Department_Name.replace(/_/g, ' ')}</TableCell>
-                <TableCell className="text-right font-mono">{formatCurrency(row.House)}</TableCell>
-                <TableCell className="text-right font-mono text-green-600">{formatCurrency(row.Increase)}</TableCell>
-                <TableCell className="text-right font-mono text-red-600">{formatCurrency(row.Decrease)}</TableCell>
-                <TableCell className="text-right font-mono">{formatCurrency(row.Net)}</TableCell>
-                <TableCell className="text-right font-mono">{formatCurrency(row.Senate)}</TableCell>
+                <TableCell className="text-right font-mono bg-blue-100 font-bold">{formatCurrency(row.Senate * 1000)}</TableCell>
+                <TableCell className="text-right font-mono">{formatCurrency(row.House * 1000)}</TableCell>
+                <TableCell className="text-right font-mono text-green-600">{formatCurrency(row.Increase * 1000)}</TableCell>
+                <TableCell className="text-right font-mono text-red-600">{formatCurrency(row.Decrease * 1000)}</TableCell>
+                <TableCell className="text-right font-mono">{formatCurrency(row.Net * 1000)}</TableCell>
               </TableRow>
             ))}
 
@@ -232,11 +164,11 @@ export function DataTable({ data }: DataTableProps) {
                       )}
                     </TableCell>
                     <TableCell className="font-semibold">{deptData.dept.Department_Name}</TableCell>
-                    <TableCell className="text-right font-mono">{formatCurrency(deptData.dept.House)}</TableCell>
-                    <TableCell className="text-right font-mono text-green-600">{formatCurrency(deptData.dept.Increase)}</TableCell>
-                    <TableCell className="text-right font-mono text-red-600">{formatCurrency(deptData.dept.Decrease)}</TableCell>
-                    <TableCell className="text-right font-mono">{formatCurrency(deptData.dept.Net)}</TableCell>
-                    <TableCell className="text-right font-mono">{formatCurrency(deptData.dept.Senate)}</TableCell>
+                    <TableCell className="text-right font-mono bg-blue-50 font-semibold">{formatCurrency(deptData.dept.Senate * 1000)}</TableCell>
+                    <TableCell className="text-right font-mono">{formatCurrency(deptData.dept.House * 1000)}</TableCell>
+                    <TableCell className="text-right font-mono text-green-600">{formatCurrency(deptData.dept.Increase * 1000)}</TableCell>
+                    <TableCell className="text-right font-mono text-red-600">{formatCurrency(deptData.dept.Decrease * 1000)}</TableCell>
+                    <TableCell className="text-right font-mono">{formatCurrency(deptData.dept.Net * 1000)}</TableCell>
                   </TableRow>
 
                   {/* Agency Rows (shown when department is expanded) */}
@@ -260,11 +192,11 @@ export function DataTable({ data }: DataTableProps) {
                             )}
                           </TableCell>
                           <TableCell className="pl-6">{agencyData.agency.Agency_Name}</TableCell>
-                          <TableCell className="text-right font-mono text-sm">{formatCurrency(agencyData.agency.House)}</TableCell>
-                          <TableCell className="text-right font-mono text-sm text-green-600">{formatCurrency(agencyData.agency.Increase)}</TableCell>
-                          <TableCell className="text-right font-mono text-sm text-red-600">{formatCurrency(agencyData.agency.Decrease)}</TableCell>
-                          <TableCell className="text-right font-mono text-sm">{formatCurrency(agencyData.agency.Net)}</TableCell>
-                          <TableCell className="text-right font-mono text-sm">{formatCurrency(agencyData.agency.Senate)}</TableCell>
+                          <TableCell className="text-right font-mono text-sm bg-blue-50">{formatCurrency(agencyData.agency.Senate * 1000)}</TableCell>
+                          <TableCell className="text-right font-mono text-sm">{formatCurrency(agencyData.agency.House * 1000)}</TableCell>
+                          <TableCell className="text-right font-mono text-sm text-green-600">{formatCurrency(agencyData.agency.Increase * 1000)}</TableCell>
+                          <TableCell className="text-right font-mono text-sm text-red-600">{formatCurrency(agencyData.agency.Decrease * 1000)}</TableCell>
+                          <TableCell className="text-right font-mono text-sm">{formatCurrency(agencyData.agency.Net * 1000)}</TableCell>
                         </TableRow>
 
                         {/* Sub-Agency Rows (shown when agency is expanded) */}
@@ -272,11 +204,11 @@ export function DataTable({ data }: DataTableProps) {
                           <TableRow key={`sub-${deptCode}-${agencyCode}-${idx}`} className="hover:bg-gray-50">
                             <TableCell></TableCell>
                             <TableCell className="pl-12 text-sm text-gray-600">{subAgency.Sub_Agency_Name}</TableCell>
-                            <TableCell className="text-right font-mono text-sm">{formatCurrency(subAgency.House)}</TableCell>
-                            <TableCell className="text-right font-mono text-sm text-green-600">{formatCurrency(subAgency.Increase)}</TableCell>
-                            <TableCell className="text-right font-mono text-sm text-red-600">{formatCurrency(subAgency.Decrease)}</TableCell>
-                            <TableCell className="text-right font-mono text-sm">{formatCurrency(subAgency.Net)}</TableCell>
-                            <TableCell className="text-right font-mono text-sm">{formatCurrency(subAgency.Senate)}</TableCell>
+                            <TableCell className="text-right font-mono text-sm bg-blue-50">{formatCurrency(subAgency.Senate * 1000)}</TableCell>
+                            <TableCell className="text-right font-mono text-sm">{formatCurrency(subAgency.House * 1000)}</TableCell>
+                            <TableCell className="text-right font-mono text-sm text-green-600">{formatCurrency(subAgency.Increase * 1000)}</TableCell>
+                            <TableCell className="text-right font-mono text-sm text-red-600">{formatCurrency(subAgency.Decrease * 1000)}</TableCell>
+                            <TableCell className="text-right font-mono text-sm">{formatCurrency(subAgency.Net * 1000)}</TableCell>
                           </TableRow>
                         ))}
                       </>
@@ -298,7 +230,7 @@ export function DataTable({ data }: DataTableProps) {
       </div>
 
       <div className="text-sm text-muted-foreground">
-        Showing {hierarchicalData.summary.length + hierarchicalData.departments.size} top-level entries
+        Showing {hierarchicalData.summary.length + hierarchicalData.departments.size} top-level entries. All amounts in pesos.
       </div>
     </div>
   );
