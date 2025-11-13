@@ -31,22 +31,64 @@ export function Layout({
       {/* Header */}
       <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
         <div className="max-w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
-          {/* Top Row: Logo and Hamburger/Download */}
-          <div className="flex items-center justify-between gap-4">
+          {/* Top Row: Logo, Navigation, and Download */}
+          <div className="flex items-center justify-between gap-4 md:gap-12">
             {/* Left: Logo and Title */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 sm:gap-6">
               <img
                 src="https://bettergov.ph/logos/svg/BetterGov_Icon-Primary.svg"
                 alt="BetterGov Logo"
-                className="h-10 w-auto"
+                className="h-10 sm:h-12 w-auto"
               />
               <div>
                 <h2 className="text-black font-bold text-sm sm:text-base lg:text-lg">FY 2026 GAB Dashboard</h2>
-                <div className="text-xs text-gray-800 hidden sm:block">By BetterGov.ph</div>
+                <div className="text-xs text-gray-800">By BetterGov.ph</div>
               </div>
             </div>
 
-            {/* Right: Hamburger (mobile) and Download */}
+            {/* Center: Desktop Navigation */}
+            <nav className="hidden lg:flex flex-1 items-center gap-8 justify-between font-bold">
+              <div className="flex gap-8">
+                <Link
+                  to="/"
+                  className={`text-md font-bold transition-colors ${location.pathname === '/'
+                    ? 'text-blue-600 underline'
+                    : 'text-black hover:text-gray-900 hover:underline'
+                    }`}
+                >
+                  Overview
+                </Link>
+                <Link
+                  to="/table"
+                  className={`text-md font-bold transition-colors ${location.pathname === '/table'
+                    ? 'text-blue-600 underline'
+                    : 'text-black hover:text-gray-900 hover:underline'
+                    }`}
+                >
+                  Table View
+                </Link>
+              </div>
+              <div className="flex gap-6">
+                <a
+                  href="https://budget.bettergov.ph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-md font-medium text-gray-600 hover:text-gray-900 hover:underline transition-colors"
+                >
+                  2025 Budget
+                </a>
+                <a
+                  href="https://budget-transparency-portal.senate.gov.ph/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-md font-medium text-gray-600 hover:text-gray-900 hover:underline transition-colors"
+                >
+                  Senate Transparency
+                </a>
+              </div>
+            </nav>
+
+            {/* Right: Download and Hamburger */}
             <div className="flex items-center gap-2">
               {/* Download Button - Desktop */}
               <Button variant="outline" onClick={downloadCSV} className="hidden sm:flex text-xs sm:text-sm">
@@ -64,48 +106,6 @@ export function Layout({
               </button>
             </div>
           </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex flex-1 items-center gap-6 justify-between mt-4">
-            <div className="flex gap-6">
-              <Link
-                to="/"
-                className={`text-sm font-medium transition-colors ${location.pathname === '/'
-                    ? 'text-blue-600 underline'
-                    : 'text-gray-600 hover:text-gray-900 hover:underline'
-                  }`}
-              >
-                Overview
-              </Link>
-              <Link
-                to="/table"
-                className={`text-sm font-medium transition-colors ${location.pathname === '/table'
-                    ? 'text-blue-600 underline'
-                    : 'text-gray-600 hover:text-gray-900 hover:underline'
-                  }`}
-              >
-                Table View
-              </Link>
-            </div>
-            <div className="flex gap-6">
-              <a
-                href="https://budget.bettergov.ph"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 hover:underline transition-colors"
-              >
-                2025 Budget
-              </a>
-              <a
-                href="https://budget-transparency-portal.senate.gov.ph/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 hover:underline transition-colors"
-              >
-                Senate Transparency
-              </a>
-            </div>
-          </nav>
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
@@ -140,8 +140,8 @@ export function Layout({
                   to="/"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`text-base font-medium py-2 transition-colors ${location.pathname === '/'
-                      ? 'text-blue-600 font-bold'
-                      : 'text-gray-600 hover:text-gray-900'
+                    ? 'text-blue-600 font-bold'
+                    : 'text-gray-600 hover:text-gray-900'
                     }`}
                 >
                   Overview
@@ -150,8 +150,8 @@ export function Layout({
                   to="/table"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`text-base font-medium py-2 transition-colors ${location.pathname === '/table'
-                      ? 'text-blue-600 font-bold'
-                      : 'text-gray-600 hover:text-gray-900'
+                    ? 'text-blue-600 font-bold'
+                    : 'text-gray-600 hover:text-gray-900'
                     }`}
                 >
                   Table View
@@ -212,8 +212,8 @@ export function Layout({
               <button
                 onClick={() => setLevelFilter('')}
                 className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${!levelFilter
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
               >
                 All Levels
@@ -223,8 +223,8 @@ export function Layout({
                   key={level}
                   onClick={() => setLevelFilter(level)}
                   className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${levelFilter === level
-                      ? 'bg-blue-600 text-white shadow-sm font-bold border border-blue-600'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-blue-600 text-white shadow-sm font-bold border border-blue-600'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >
                   {level}
@@ -239,8 +239,8 @@ export function Layout({
               <button
                 onClick={() => setLevelFilter('')}
                 className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap flex-shrink-0 ${!levelFilter
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
               >
                 All Levels
@@ -250,8 +250,8 @@ export function Layout({
                   key={level}
                   onClick={() => setLevelFilter(level)}
                   className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap flex-shrink-0 ${levelFilter === level
-                      ? 'bg-blue-600 text-white shadow-sm font-bold border border-blue-600'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-blue-600 text-white shadow-sm font-bold border border-blue-600'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >
                   {level}
