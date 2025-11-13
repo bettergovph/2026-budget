@@ -205,7 +205,7 @@ function App() {
             <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
               <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Total Senate Appropriations</CardDescription>
             </CardHeader>
-            <CardContent className="p-3 sm:p-6 pt-0">
+            <CardContent className="p-3 sm:px-6 pt-0">
               <div className="text-lg sm:text-2xl font-bold text-gray-900">₱{formatCurrency(stats.totalSenate * 1000)}</div>
               <div className="mt-1 sm:mt-2 flex items-center text-xs sm:text-sm">
                 <span className="text-blue-600 font-medium">+0.0%</span>
@@ -218,7 +218,7 @@ function App() {
             <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
               <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Total House Appropriations</CardDescription>
             </CardHeader>
-            <CardContent className="p-3 sm:p-6 pt-0">
+            <CardContent className="p-3 sm:px-6 pt-0">
               <div className="text-lg sm:text-2xl font-bold text-gray-900">₱{formatCurrency(stats.totalHouse * 1000)}</div>
               <div className="mt-1 sm:mt-2 flex items-center text-xs sm:text-sm">
                 <span className="text-blue-600 font-medium">+0.0%</span>
@@ -231,7 +231,7 @@ function App() {
             <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
               <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Total Increases</CardDescription>
             </CardHeader>
-            <CardContent className="p-3 sm:p-6 pt-0">
+            <CardContent className="p-3 sm:px-6 pt-0">
               <div className="text-lg sm:text-2xl font-bold text-green-600 flex items-center gap-1 sm:gap-2">
                 <TrendingUp className="w-4 h-4 sm:w-6 sm:h-6" />
                 ₱{formatCurrency(stats.totalIncrease * 1000)}
@@ -247,7 +247,7 @@ function App() {
             <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
               <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Total Decreases</CardDescription>
             </CardHeader>
-            <CardContent className="p-3 sm:p-6 pt-0">
+            <CardContent className="p-3 sm:px-6 pt-0">
               <div className="text-lg sm:text-2xl font-bold text-red-600 flex items-center gap-1 sm:gap-2">
                 <TrendingDown className="w-4 h-4 sm:w-6 sm:h-6" />
                 ₱{formatCurrency(Math.abs(stats.totalDecrease) * 1000)}
@@ -263,7 +263,7 @@ function App() {
             <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
               <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Automatic Appropriations</CardDescription>
             </CardHeader>
-            <CardContent className="p-3 sm:p-6 pt-0">
+            <CardContent className="p-3 sm:px-6 pt-0 pb-8">
               <div className="text-lg sm:text-2xl font-bold text-gray-900">₱{formatCurrency(AUTOMATIC_APPROPRIATIONS)}</div>
               <div className="mt-1 sm:mt-2 flex items-center text-xs sm:text-sm">
                 <span className="text-gray-600 font-medium">Fixed</span>
