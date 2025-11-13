@@ -145,7 +145,7 @@ function App() {
               <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - Senate</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-4xl font-bold text-blue-900">₱{formatCurrency(grandTotalSenate)}</div>
+              <div className="text-2xl md:text-4xl font-bold text-blue-900">₱{formatCurrency(grandTotalSenate)}</div>
               <div className="mt-2 flex items-center text-sm">
                 <span className="text-blue-700 font-medium">Senate + Automatic Appropriations</span>
               </div>
@@ -171,7 +171,7 @@ function App() {
               <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - House</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-4xl font-bold text-blue-900">₱{formatCurrency(grandTotalHouse)}</div>
+              <div className="text-2xl md:text-4xl font-bold text-blue-900">₱{formatCurrency(grandTotalHouse)}</div>
               <div className="mt-2 flex items-center text-sm">
                 <span className="text-blue-700 font-medium">House + Automatic Appropriations</span>
               </div>
@@ -192,7 +192,7 @@ function App() {
               <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">NEP 2026</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-4xl font-bold text-blue-900">₱{formatCurrency(NEP_2026_TOTAL)}</div>
+              <div className="text-2xl md:text-4xl font-bold text-blue-900">₱{formatCurrency(NEP_2026_TOTAL)}</div>
               <div className="mt-2 flex items-center text-sm">
                 <span className="text-blue-700 font-medium">2026 NEP</span>
               </div>

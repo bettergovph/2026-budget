@@ -70,21 +70,19 @@ export function Layout({
             <div className="flex gap-6">
               <Link
                 to="/"
-                className={`text-sm font-medium transition-colors ${
-                  location.pathname === '/'
+                className={`text-sm font-medium transition-colors ${location.pathname === '/'
                     ? 'text-blue-600 underline'
                     : 'text-gray-600 hover:text-gray-900 hover:underline'
-                }`}
+                  }`}
               >
                 Overview
               </Link>
               <Link
                 to="/table"
-                className={`text-sm font-medium transition-colors ${
-                  location.pathname === '/table'
+                className={`text-sm font-medium transition-colors ${location.pathname === '/table'
                     ? 'text-blue-600 underline'
                     : 'text-gray-600 hover:text-gray-900 hover:underline'
-                }`}
+                  }`}
               >
                 Table View
               </Link>
@@ -141,22 +139,20 @@ export function Layout({
                 <Link
                   to="/"
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-base font-medium py-2 transition-colors ${
-                    location.pathname === '/'
+                  className={`text-base font-medium py-2 transition-colors ${location.pathname === '/'
                       ? 'text-blue-600 font-bold'
                       : 'text-gray-600 hover:text-gray-900'
-                  }`}
+                    }`}
                 >
                   Overview
                 </Link>
                 <Link
                   to="/table"
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-base font-medium py-2 transition-colors ${
-                    location.pathname === '/table'
+                  className={`text-base font-medium py-2 transition-colors ${location.pathname === '/table'
                       ? 'text-blue-600 font-bold'
                       : 'text-gray-600 hover:text-gray-900'
-                  }`}
+                    }`}
                 >
                   Table View
                 </Link>
@@ -215,11 +211,10 @@ export function Layout({
             <div className="flex overflow-x-auto gap-2 pb-2 -mb-2 scrollbar-hide">
               <button
                 onClick={() => setLevelFilter('')}
-                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${
-                  !levelFilter
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${!levelFilter
                     ? 'bg-blue-600 text-white shadow-sm'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                  }`}
               >
                 All Levels
               </button>
@@ -227,11 +222,10 @@ export function Layout({
                 <button
                   key={level}
                   onClick={() => setLevelFilter(level)}
-                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${
-                    levelFilter === level
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${levelFilter === level
                       ? 'bg-blue-600 text-white shadow-sm font-bold border border-blue-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                    }`}
                 >
                   {level}
                 </button>
@@ -244,11 +238,10 @@ export function Layout({
             <div className="flex overflow-x-auto gap-2 pb-2 -mb-2 scrollbar-hide">
               <button
                 onClick={() => setLevelFilter('')}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap flex-shrink-0 ${
-                  !levelFilter
+                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap flex-shrink-0 ${!levelFilter
                     ? 'bg-blue-600 text-white shadow-sm'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                  }`}
               >
                 All Levels
               </button>
@@ -256,11 +249,10 @@ export function Layout({
                 <button
                   key={level}
                   onClick={() => setLevelFilter(level)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap flex-shrink-0 ${
-                    levelFilter === level
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap flex-shrink-0 ${levelFilter === level
                       ? 'bg-blue-600 text-white shadow-sm font-bold border border-blue-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                    }`}
                 >
                   {level}
                 </button>
@@ -274,7 +266,23 @@ export function Layout({
       <main className="max-w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-8">{children}</main>
 
       {/* Footer */}
-      // ... existing footer code ...
+      <footer className="border-t border-gray-200 mt-12 py-6 bg-white">
+        <div className="max-w-full px-6 text-center text-sm text-gray-600">
+          <p>FY 2026 General Appropriations Bill - All amounts in Thousand Pesos</p>
+          <p className="mt-1">Data Source: Committee Report HBN 4058</p>
+          <p className="mt-3 text-xs">
+            Data under <span className="font-semibold">public domain</span> • Source code:{' '}
+            <a
+              href="https://github.com/bettergovph/2026-budget"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              github.com/bettergovph/2026-budget
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
