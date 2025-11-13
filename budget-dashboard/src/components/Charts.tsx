@@ -15,19 +15,19 @@ export function Charts({ data }: ChartsProps) {
   // Determine which level of data we're looking at
   const dataLevel = useMemo(() => {
     const levels = new Set(data.map(d => d.Level));
-    
+
     // If only one level, show specialized view
     if (levels.size === 1) {
       return Array.from(levels)[0];
     }
-    
+
     // If multiple levels but no Summary, determine primary level
     if (!levels.has('Summary')) {
       if (levels.has('Department')) return 'Department';
       if (levels.has('Agency')) return 'Agency';
       if (levels.has('Sub-Agency')) return 'Sub-Agency';
     }
-    
+
     return 'Mixed';
   }, [data]);
 
@@ -35,7 +35,7 @@ export function Charts({ data }: ChartsProps) {
     const departments = data.filter(d => d.Level === 'Department');
     const agencies = data.filter(d => d.Level === 'Agency');
     const subAgencies = data.filter(d => d.Level === 'Sub-Agency');
-    
+
     return {
       departmentCount: departments.length,
       agencyCount: agencies.length,
@@ -150,7 +150,7 @@ export function Charts({ data }: ChartsProps) {
 
       {/* Show Department Charts by default for mixed data */}
       <DepartmentCharts data={data} />
-      
+
       {stats.agencyCount > 0 && (
         <div className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Agency-Level Analysis</h2>

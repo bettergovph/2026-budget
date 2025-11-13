@@ -19,7 +19,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
     return depts
       .sort((a, b) => b.Senate - a.Senate)
       .map(d => ({
-        name: d.Department_Name.length > 30 
+        name: d.Department_Name.length > 30
           ? d.Department_Name.substring(0, 30) + '...'
           : d.Department_Name,
         fullName: d.Department_Name,
@@ -36,7 +36,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
     if (!selectedDept) return [];
     const dept = departmentData.find(d => d.code === selectedDept);
     if (!dept) return [];
-    
+
     return data
       .filter(d => d.Level === 'Agency' && d.Department_Name === dept.fullName)
       .sort((a, b) => b.Senate - a.Senate)
@@ -115,8 +115,8 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={Math.max(400, departmentData.length * 35)}>
-              <BarChart 
-                data={departmentData} 
+              <BarChart
+                data={departmentData}
                 layout="vertical"
                 onClick={(data: any) => {
                   if (data && data.activePayload) {
@@ -171,7 +171,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
               Agencies in Selected Department ({departmentAgencies.length} total)
-              <button 
+              <button
                 onClick={() => setSelectedDept(null)}
                 className="ml-auto text-sm px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md"
               >

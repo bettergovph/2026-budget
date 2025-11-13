@@ -159,23 +159,22 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           <Card>
             <CardHeader className="pb-2">
-              <CardDescription>Total House Appropriations</CardDescription>
+              <CardDescription>Total Senate Appropriations</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">₱{formatCurrency(stats.totalHouse / 1000)}</div>
-              <p className="text-xs text-gray-600 mt-1">In Million Pesos</p>
+              <div className="text-2xl font-bold">₱{formatCurrency(stats.totalSenate * 1000)}</div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="pb-2">
-              <CardDescription>Total Senate Appropriations</CardDescription>
+              <CardDescription>Total House Appropriations</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">₱{formatCurrency(stats.totalSenate / 1000)}</div>
-              <p className="text-xs text-gray-600 mt-1">In Million Pesos</p>
+              <div className="text-2xl font-bold">₱{formatCurrency(stats.totalHouse * 1000)}</div>
             </CardContent>
           </Card>
+
 
           <Card>
             <CardHeader className="pb-2">
@@ -184,9 +183,8 @@ function App() {
             <CardContent>
               <div className="text-2xl font-bold text-green-600 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5" />
-                ₱{formatCurrency(stats.totalIncrease / 1000)}
+                ₱{formatCurrency(stats.totalIncrease * 1000)}
               </div>
-              <p className="text-xs text-gray-600 mt-1">In Million Pesos</p>
             </CardContent>
           </Card>
 
@@ -197,9 +195,8 @@ function App() {
             <CardContent>
               <div className="text-2xl font-bold text-red-600 flex items-center gap-2">
                 <TrendingDown className="w-5 h-5" />
-                ₱{formatCurrency(Math.abs(stats.totalDecrease) / 1000)}
+                ₱{formatCurrency(Math.abs(stats.totalDecrease) * 1000)}
               </div>
-              <p className="text-xs text-gray-600 mt-1">In Million Pesos</p>
             </CardContent>
           </Card>
         </div>
