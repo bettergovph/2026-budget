@@ -29,8 +29,8 @@ export function DataTable({ data }: DataTableProps) {
     if (sortKey !== columnKey) {
       return <ArrowUpDown className="w-3 h-3 ml-1 inline opacity-30" />;
     }
-    return sortDirection === 'asc' ? 
-      <ArrowUp className="w-3 h-3 ml-1 inline" /> : 
+    return sortDirection === 'asc' ?
+      <ArrowUp className="w-3 h-3 ml-1 inline" /> :
       <ArrowDown className="w-3 h-3 ml-1 inline" />;
   };
 
@@ -140,7 +140,7 @@ export function DataTable({ data }: DataTableProps) {
       });
       structure.departments = new Map(sortedDepts);
     }
-    
+
     return structure;
   }, [data, sortKey, sortDirection]);
 
@@ -152,32 +152,32 @@ export function DataTable({ data }: DataTableProps) {
             <TableRow>
               <TableHead className="w-12"></TableHead>
               <TableHead>Department / Agency / Sub-Agency</TableHead>
-              <TableHead 
-                className="text-right bg-blue-50 cursor-pointer hover:bg-blue-100" 
+              <TableHead
+                className="text-right bg-blue-50 cursor-pointer hover:bg-blue-100"
                 onClick={() => handleSort('Senate')}
               >
                 Senate <SortIcon columnKey="Senate" />
               </TableHead>
-              <TableHead 
-                className="text-right cursor-pointer hover:bg-gray-50" 
+              <TableHead
+                className="text-right cursor-pointer hover:bg-gray-50"
                 onClick={() => handleSort('House')}
               >
                 House <SortIcon columnKey="House" />
               </TableHead>
-              <TableHead 
-                className="text-right cursor-pointer hover:bg-gray-50" 
+              <TableHead
+                className="text-right cursor-pointer hover:bg-gray-50"
                 onClick={() => handleSort('Increase')}
               >
                 Increased by Senate <SortIcon columnKey="Increase" />
               </TableHead>
-              <TableHead 
-                className="text-right cursor-pointer hover:bg-gray-50" 
+              <TableHead
+                className="text-right cursor-pointer hover:bg-gray-50"
                 onClick={() => handleSort('Decrease')}
               >
                 Decreased by Senate <SortIcon columnKey="Decrease" />
               </TableHead>
-              <TableHead 
-                className="text-right cursor-pointer hover:bg-gray-50" 
+              <TableHead
+                className="text-right cursor-pointer hover:bg-gray-50"
                 onClick={() => handleSort('Net')}
               >
                 Net <SortIcon columnKey="Net" />
