@@ -1,16 +1,77 @@
-# React + Vite
+# FY 2026 General Appropriations Bill Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive budget visualization dashboard for the Philippine Government's FY 2026 General Appropriations Bill.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Charts**: Visualize budget data with multiple chart types (bar, line, area, pie)
+- **Hierarchical Table**: Expandable/collapsible table view showing Department → Agency → Sub-Agency structure
+- **Filtering**: Search and filter by department, agency, or level
+- **Data Export**: Download filtered data as CSV
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** with TypeScript
+- **Vite** - Build tool
+- **Tailwind CSS v4** - Styling
+- **shadcn/ui** - Component library
+- **Recharts** - Data visualization
+- **PapaParse** - CSV parsing and generation
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install --legacy-peer-deps
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Data Source
+
+Budget data sourced from:
+- [Senate Budget Transparency Portal](https://budget-transparency-portal.senate.gov.ph/public/documents)
+- Committee Report HBN 4058
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Charts.tsx              # Main chart container
+│   ├── DataTable.tsx           # Hierarchical table view
+│   ├── charts/
+│   │   ├── DepartmentCharts.tsx
+│   │   ├── AgencyCharts.tsx
+│   │   └── SummaryCharts.tsx
+│   └── ui/                     # shadcn/ui components
+├── types/
+│   └── budget.ts               # TypeScript types
+└── App.tsx                     # Main application
+```
+
+## License
+
+Data is in the **public domain**.
+
+Source code: [https://github.com/bettergovph/2026-budget](https://github.com/bettergovph/2026-budget)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+Built with ❤️ by [BetterGov.ph](https://bettergov.ph)

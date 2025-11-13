@@ -104,8 +104,8 @@ function App() {
       {/* Header */}
       <header className="border-b border-gray-100 bg-white sticky top-0 z-10">
         <div className="max-w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
-          {/* Top Row: Logo, Title, and Actions */}
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
+          {/* Top Row: Logo, Navigation, and Download */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
             {/* Left: Logo and Title */}
             <div className="flex items-center gap-3 sm:gap-6">
               <img src="https://bettergov.ph/logos/svg/BetterGov_Icon-Primary.svg" alt="BetterGov Logo" className="h-10 sm:h-12 w-auto" />
@@ -115,42 +115,59 @@ function App() {
               </div>
             </div>
 
-            {/* Right: View Mode Buttons and Downloads */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-              {/* View Mode Buttons */}
+            {/* Center: Navigation Links */}
+            <nav className="flex flex-1 items-center gap-6 justify-between">
               <div className="flex gap-2">
-                <Button
-                  variant={viewMode === 'dashboard' ? 'default' : 'outline'}
+                <button
                   onClick={() => setViewMode('dashboard')}
-                  className="text-xs sm:text-sm"
+                  className={`text-sm font-medium transition-colors bg-transparent bg-none border-none cursor-pointer p-0 ${viewMode === 'dashboard'
+                    ? 'text-black font-extrabold border-2 border-blue-600'
+                    : 'text-gray-600 hover:text-gray-900 hover:underline'
+                    }`}
                 >
-                  <BarChart3 className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  <span className="hidden sm:inline">Dashboard</span>
-                  <span className="sm:hidden">Charts</span>
-                </Button>
-                <Button
-                  variant={viewMode === 'table' ? 'default' : 'outline'}
+                  Overview
+                </button>
+                <button
                   onClick={() => setViewMode('table')}
-                  className="text-xs sm:text-sm"
+                  className={`text-sm font-medium transition-colors bg-transparent bg-none border-none cursor-pointer p-0 ${viewMode === 'table'
+                    ? 'text-black font-extrabold border-2'
+                    : 'text-gray-600 hover:text-gray-900 hover:underline'
+                    }`}
                 >
-                  <Table2 className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  Table
-                </Button>
+                  Table View
+                </button>
               </div>
+              <div className='flex gap-6'>
+                <a
+                  href="https://budget.bettergov.ph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-gray-600 hover:text-gray-900 hover:underline transition-colors"
+                >
+                  2025 Budget
+                </a>
+                <a
+                  href="https://budget-transparency-portal.senate.gov.ph/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-gray-600 hover:text-gray-900 hover:underline transition-colors"
+                >
+                  Senate Transparency
+                </a>
+              </div>
+            </nav>
 
-              {/* Download Buttons */}
-              <div className="flex gap-2">
-                <Button variant="outline" onClick={downloadCSV} className="text-xs sm:text-sm">
-                  <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  CSV
-                </Button>
-              </div>
+            {/* Right: Download Button */}
+            <div>
+              <Button variant="outline" onClick={downloadCSV} className="text-xs sm:text-sm">
+                <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                Download CSV
+              </Button>
             </div>
           </div>
 
-
           {/* Filters */}
-          <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+          <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center mt-4">
             <div className="flex items-center gap-2 flex-1">
               <Filter className="w-4 h-4 text-gray-500 flex-shrink-0" />
               <div className="relative flex-1">
@@ -284,12 +301,10 @@ function App() {
       <footer className="border-t border-gray-200 mt-12 py-6 bg-white">
         <div className="max-w-full px-6 text-center text-sm text-gray-600">
           <p>FY 2026 General Appropriations Bill - All amounts in Thousand Pesos</p>
-
-          {/* Source Link - Below on mobile, inline on larger screens */}
-          <div className="text-xs sm:text-sm text-gray-600 mb-4">
-            Source: <a href="https://budget-transparency-portal.senate.gov.ph/public/documents" target='_blank' className="text-blue-600 hover:underline">Senate Budget Transparency Portal</a>
-          </div>
-
+          <p className="mt-1">Data Source: Committee Report HBN 4058</p>
+          <p className="mt-3 text-xs">
+            Data under <span className="font-semibold">public domain</span> • Source code: <a href="https://github.com/bettergovph/2026-budget" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">github.com/bettergovph/2026-budget</a>
+          </p>
         </div>
       </footer>
     </div>
