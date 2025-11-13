@@ -64,7 +64,8 @@ export function DataTable({ data }: DataTableProps) {
     filtered.forEach(row => {
       if (row.Level === 'Summary') {
         structure.summary.push(row);
-      } else if (row.Level === 'Department') {
+      } else if (row.Level === 'Department' || row.Level === 'Special Purpose Fund') {
+        // Handle both Department and Special Purpose Fund as top-level entries
         if (!structure.departments.has(row.Department_Code)) {
           structure.departments.set(row.Department_Code, {
             dept: row,
@@ -72,9 +73,19 @@ export function DataTable({ data }: DataTableProps) {
           });
         }
       } else if (row.Level === 'Agency') {
+        // Ensure department exists
         if (!structure.departments.has(row.Department_Code)) {
+          // Create a placeholder department if it doesn't exist
+          const placeholderDept: BudgetData = {
+            ...row,
+            Level: 'Department',
+            Agency_Code: '',
+            Agency_Name: '',
+            Sub_Agency_Code: '',
+            Sub_Agency_Name: '',
+          };
           structure.departments.set(row.Department_Code, {
-            dept: row,
+            dept: placeholderDept,
             agencies: new Map(),
           });
         }
@@ -86,16 +97,32 @@ export function DataTable({ data }: DataTableProps) {
           });
         }
       } else if (row.Level === 'Sub-Agency') {
+        // Ensure department exists
         if (!structure.departments.has(row.Department_Code)) {
+          const placeholderDept: BudgetData = {
+            ...row,
+            Level: 'Department',
+            Agency_Code: '',
+            Agency_Name: '',
+            Sub_Agency_Code: '',
+            Sub_Agency_Name: '',
+          };
           structure.departments.set(row.Department_Code, {
-            dept: row,
+            dept: placeholderDept,
             agencies: new Map(),
           });
         }
         const deptData = structure.departments.get(row.Department_Code)!;
+        // Ensure agency exists
         if (!deptData.agencies.has(row.Agency_Code)) {
+          const placeholderAgency: BudgetData = {
+            ...row,
+            Level: 'Agency',
+            Sub_Agency_Code: '',
+            Sub_Agency_Name: '',
+          };
           deptData.agencies.set(row.Agency_Code, {
-            agency: row,
+            agency: placeholderAgency,
             subAgencies: [],
           });
         }
@@ -188,20 +215,19 @@ export function DataTable({ data }: DataTableProps) {
             {Array.from(hierarchicalData.departments.entries()).map(([deptCode, deptData]) => {
               const hasAgencies = deptData.agencies.size > 0;
               const isExpanded = expandedRows.has(`dept-${deptCode}`);
-              
+
               return (
                 <>
-                  <TableRow 
+                  <TableRow
                     key={`dept-${deptCode}`}
                     className="bg-gray-50 hover:bg-gray-100 cursor-pointer font-medium"
                     onClick={() => hasAgencies && toggleRow(`dept-${deptCode}`)}
                   >
                     <TableCell>
                       {hasAgencies && (
-                        <ChevronRight 
-                          className={`w-4 h-4 transition-transform ${
-                            isExpanded ? 'rotate-90' : ''
-                          }`}
+                        <ChevronRight
+                          className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''
+                            }`}
                         />
                       )}
                     </TableCell>
@@ -217,7 +243,7 @@ export function DataTable({ data }: DataTableProps) {
                   {isExpanded && Array.from(deptData.agencies.entries()).map(([agencyCode, agencyData]) => {
                     const hasSubAgencies = agencyData.subAgencies.length > 0;
                     const isAgencyExpanded = expandedRows.has(`agency-${deptCode}-${agencyCode}`);
-                    
+
                     return (
                       <>
                         <TableRow
@@ -227,10 +253,9 @@ export function DataTable({ data }: DataTableProps) {
                         >
                           <TableCell className="pl-8">
                             {hasSubAgencies && (
-                              <ChevronRight 
-                                className={`w-4 h-4 transition-transform ${
-                                  isAgencyExpanded ? 'rotate-90' : ''
-                                }`}
+                              <ChevronRight
+                                className={`w-4 h-4 transition-transform ${isAgencyExpanded ? 'rotate-90' : ''
+                                  }`}
                               />
                             )}
                           </TableCell>
