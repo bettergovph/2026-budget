@@ -123,7 +123,7 @@ function App() {
       )}
 
       {/* Grand Totals Row */}
-      <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-5 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-4">
         <Card className="border-blue-200 hover:shadow-md transition-shadow">
           <CardHeader className="pb-3">
             <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - House</CardDescription>
@@ -131,7 +131,7 @@ function App() {
           <CardContent>
             <div className="text-4xl font-bold text-blue-900">₱{formatCurrency((stats.totalHouse * 1000) + 2277692070000)}</div>
             <div className="mt-2 flex items-center text-sm">
-              <span className="text-blue-700 font-medium">House + Automatic</span>
+              <span className="text-blue-700 font-medium">House + Automatic Appropriations</span>
             </div>
           </CardContent>
         </Card>
@@ -143,7 +143,18 @@ function App() {
           <CardContent>
             <div className="text-4xl font-bold text-blue-900">₱{formatCurrency((stats.totalSenate * 1000) + 2277692070000)}</div>
             <div className="mt-2 flex items-center text-sm">
-              <span className="text-blue-700 font-medium">Senate + Automatic</span>
+              <span className="text-blue-700 font-medium">Senate + Automatic Appropriations</span>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="border-blue-200 hover:shadow-md transition-shadow">
+          <CardHeader className="pb-3">
+            <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">NEP 2026</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="text-4xl font-bold text-blue-900">₱{formatCurrency(6793162000000)}</div>
+            <div className="mt-2 flex items-center text-sm">
+              <span className="text-blue-700 font-medium">2026 NEP</span>
             </div>
           </CardContent>
         </Card>
