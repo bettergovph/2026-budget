@@ -102,18 +102,18 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Main Overview Section */}
-      <div className="grid lg:grid-cols-3 gap-6">
+      <div className="grid lg:grid-cols-3 gap-4 sm:gap-6">
         <Card className="lg:col-span-2 border-gray-100 shadow-sm">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Building2 className="w-5 h-5" />
+          <CardHeader className="p-3 sm:p-6">
+            <CardTitle className="flex items-center gap-2 text-base sm:text-lg">
+              <Building2 className="w-4 h-4 sm:w-5 sm:h-5" />
               All Departments by Budget ({departmentData.length} total)
             </CardTitle>
-            <CardDescription>Click a bar to view agencies within that department</CardDescription>
+            <CardDescription className="text-xs sm:text-sm">Click a bar to view agencies within that department</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-2 sm:p-6">
             <ResponsiveContainer width="100%" height={Math.max(400, departmentData.length * 35)}>
               <BarChart
                 data={departmentData}
@@ -125,10 +125,10 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
                 }}
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" horizontal={false} />
-                <XAxis type="number" tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 11 }} />
-                <YAxis dataKey="name" type="category" width={200} tick={{ fontSize: 10 }} />
+                <XAxis type="number" tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 9 }} />
+                <YAxis dataKey="name" type="category" width={150} tick={{ fontSize: 8 }} />
                 <Tooltip content={<CustomTooltip />} />
-                <Legend wrapperStyle={{ fontSize: '12px' }} />
+                <Legend wrapperStyle={{ fontSize: '10px' }} />
                 <Bar dataKey="house" fill="#10b981" radius={[0, 4, 4, 0]} name="House" />
                 <Bar dataKey="senate" fill="#f59e0b" radius={[0, 4, 4, 0]} name="Senate" />
               </BarChart>
@@ -137,12 +137,12 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
         </Card>
 
         <Card className="border-gray-100 shadow-sm">
-          <CardHeader>
-            <CardTitle className="text-lg">Budget Distribution</CardTitle>
-            <CardDescription>Top 8 departments by allocation</CardDescription>
+          <CardHeader className="p-3 sm:p-6">
+            <CardTitle className="text-base sm:text-lg">Budget Distribution</CardTitle>
+            <CardDescription className="text-xs sm:text-sm">Top 8 departments by allocation</CardDescription>
           </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={400}>
+          <CardContent className="p-2 sm:p-6">
+            <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
                   data={budgetDistribution}
@@ -150,7 +150,7 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
                   cy="50%"
                   labelLine={false}
                   label={renderCustomizedLabel}
-                  outerRadius={100}
+                  outerRadius={80}
                   fill="#8884d8"
                   dataKey="value"
                 >
@@ -168,28 +168,28 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
       {/* Selected Department Agencies */}
       {selectedDept && departmentAgencies.length > 0 && (
         <Card className="border-2 border-blue-200 shadow-md bg-blue-50/30">
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
+          <CardHeader className="p-3 sm:p-6">
+            <CardTitle className="text-base sm:text-lg flex items-center gap-2">
               Agencies in Selected Department ({departmentAgencies.length} total)
               <button
                 onClick={() => setSelectedDept(null)}
-                className="ml-auto text-sm px-3 py-1 bg-white hover:bg-gray-50 border border-gray-200 rounded-md transition-colors"
+                className="ml-auto text-xs sm:text-sm px-2 sm:px-3 py-1 bg-white hover:bg-gray-50 border border-gray-200 rounded-md transition-colors"
               >
                 Clear Selection
               </button>
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="text-xs sm:text-sm">
               {departmentData.find(d => d.code === selectedDept)?.fullName}
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={Math.max(350, departmentAgencies.length * 40)}>
+          <CardContent className="p-2 sm:p-6">
+            <ResponsiveContainer width="100%" height={Math.max(300, departmentAgencies.length * 35)}>
               <BarChart data={departmentAgencies}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" vertical={false} />
-                <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(100, departmentAgencies.length * 5)} tick={{ fontSize: 10 }} />
-                <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 11 }} />
+                <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(80, departmentAgencies.length * 4)} tick={{ fontSize: 8 }} />
+                <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 9 }} />
                 <Tooltip content={<CustomTooltip />} />
-                <Legend wrapperStyle={{ fontSize: '12px' }} />
+                <Legend wrapperStyle={{ fontSize: '10px' }} />
                 <Bar dataKey="house" fill="#3b82f6" radius={[4, 4, 0, 0]} name="House" />
                 <Bar dataKey="senate" fill="#8b5cf6" radius={[4, 4, 0, 0]} name="Senate" />
               </BarChart>
@@ -199,23 +199,23 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
       )}
 
       {/* Budget Changes Analysis */}
-      <div className="grid lg:grid-cols-2 gap-6">
+      <div className="grid lg:grid-cols-2 gap-4 sm:gap-6">
         <Card className="border-gray-100 shadow-sm">
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
-              <TrendingDown className="w-5 h-5 text-red-600" />
+          <CardHeader className="p-3 sm:p-6">
+            <CardTitle className="text-base sm:text-lg flex items-center gap-2">
+              <TrendingDown className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" />
               Department Budget Changes ({changeAnalysis.length} with changes)
             </CardTitle>
-            <CardDescription>All departments with budget changes</CardDescription>
+            <CardDescription className="text-xs sm:text-sm">All departments with budget changes</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-2 sm:p-6">
             <ResponsiveContainer width="100%" height={Math.max(400, changeAnalysis.length * 35)}>
               <BarChart data={changeAnalysis}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" vertical={false} />
-                <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(100, changeAnalysis.length * 5)} tick={{ fontSize: 10 }} />
-                <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 11 }} />
+                <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(80, changeAnalysis.length * 4)} tick={{ fontSize: 8 }} />
+                <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 9 }} />
                 <Tooltip content={<CustomTooltip />} />
-                <Legend wrapperStyle={{ fontSize: '12px' }} />
+                <Legend wrapperStyle={{ fontSize: '10px' }} />
                 <Bar dataKey="increase" fill="#10b981" radius={[4, 4, 0, 0]} name="Increase" />
                 <Bar dataKey="decrease" fill="#ef4444" radius={[4, 4, 0, 0]} name="Decrease" />
               </BarChart>
@@ -224,16 +224,16 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
         </Card>
 
         <Card className="border-gray-100 shadow-sm">
-          <CardHeader>
-            <CardTitle className="text-lg">Net Change Trend</CardTitle>
-            <CardDescription>Net budget changes across all departments</CardDescription>
+          <CardHeader className="p-3 sm:p-6">
+            <CardTitle className="text-base sm:text-lg">Net Change Trend</CardTitle>
+            <CardDescription className="text-xs sm:text-sm">Net budget changes across all departments</CardDescription>
           </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={Math.max(400, changeAnalysis.length * 35)}>
+          <CardContent className="p-2 sm:p-6">
+            <ResponsiveContainer width="100%" height={Math.max(300, changeAnalysis.length * 30)}>
               <AreaChart data={changeAnalysis}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" vertical={false} />
-                <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(100, changeAnalysis.length * 5)} tick={{ fontSize: 10 }} />
-                <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 11 }} />
+                <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(80, changeAnalysis.length * 4)} tick={{ fontSize: 8 }} />
+                <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 9 }} />
                 <Tooltip content={<CustomTooltip />} />
                 <Area type="monotone" dataKey="net" stroke="#6366f1" fill="#6366f1" fillOpacity={0.6} name="Net Change" />
               </AreaChart>
@@ -244,18 +244,18 @@ export function DepartmentCharts({ data }: DepartmentChartsProps) {
 
       {/* Comparative Analysis */}
       <Card className="border-gray-100 shadow-sm">
-        <CardHeader>
-          <CardTitle className="text-lg">House vs Senate Allocation Comparison</CardTitle>
-          <CardDescription>Line comparison of all {departmentData.length} departments</CardDescription>
+        <CardHeader className="p-3 sm:p-6">
+          <CardTitle className="text-base sm:text-lg">House vs Senate Allocation Comparison</CardTitle>
+          <CardDescription className="text-xs sm:text-sm">Line comparison of all {departmentData.length} departments</CardDescription>
         </CardHeader>
-        <CardContent>
-          <ResponsiveContainer width="100%" height={Math.max(400, departmentData.length * 25)}>
+        <CardContent className="p-2 sm:p-6">
+          <ResponsiveContainer width="100%" height={Math.max(300, departmentData.length * 20)}>
             <LineChart data={departmentData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" />
-              <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(100, departmentData.length * 5)} tick={{ fontSize: 10 }} />
-              <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 11 }} />
+              <XAxis dataKey="name" angle={-45} textAnchor="end" height={Math.max(80, departmentData.length * 4)} tick={{ fontSize: 8 }} />
+              <YAxis tickFormatter={(value) => `₱${(value / 1000000).toFixed(0)}B`} tick={{ fontSize: 9 }} />
               <Tooltip content={<CustomTooltip />} />
-              <Legend wrapperStyle={{ fontSize: '12px' }} />
+              <Legend wrapperStyle={{ fontSize: '10px' }} />
               <Line type="monotone" dataKey="house" stroke="#3b82f6" strokeWidth={2} name="House" dot={{ r: 3 }} activeDot={{ r: 5 }} />
               <Line type="monotone" dataKey="senate" stroke="#8b5cf6" strokeWidth={2} name="Senate" dot={{ r: 3 }} activeDot={{ r: 5 }} />
             </LineChart>

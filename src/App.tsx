@@ -122,8 +122,8 @@ function App() {
     return (
       <>
         {(searchTerm || levelFilter) && (
-          <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-            <p className="text-sm text-blue-900">
+          <div className="mb-2 sm:mb-4 p-2 sm:p-3 bg-blue-50 border border-blue-200 rounded-lg">
+            <p className="text-xs sm:text-sm text-blue-900">
               <strong>Filtered:</strong> Showing {filteredData.length} of {data.length} entries
               {searchTerm && ` matching "${searchTerm}"`}
               {levelFilter && ` • Level: ${levelFilter}`}
@@ -132,8 +132,8 @@ function App() {
         )}
 
         {/* Disclaimer */}
-        <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-          <p className="text-sm text-yellow-900">
+        <div className="mb-3 sm:mb-6 p-2 sm:p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <p className="text-xs sm:text-sm text-yellow-900">
             <strong>⚠️ Note:</strong> We are still analyzing the differences between the 2026 NEP (National Expenditure Program) and the Senate GAB (General Appropriations Bill). Data may be subject to updates.
           </p>
         </div>
@@ -200,14 +200,14 @@ function App() {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-5 mb-3 sm:mb-4">
           <Card className="border-gray-100 hover:shadow-md transition-shadow">
-            <CardHeader className="pb-3">
-              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Senate Appropriations</CardDescription>
+            <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
+              <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Total Senate Appropriations</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-gray-900">₱{formatCurrency(stats.totalSenate * 1000)}</div>
-              <div className="mt-2 flex items-center text-sm">
+            <CardContent className="p-3 sm:p-6 pt-0">
+              <div className="text-lg sm:text-2xl font-bold text-gray-900">₱{formatCurrency(stats.totalSenate * 1000)}</div>
+              <div className="mt-1 sm:mt-2 flex items-center text-xs sm:text-sm">
                 <span className="text-blue-600 font-medium">+0.0%</span>
                 <span className="text-gray-500 ml-2">vs last period</span>
               </div>
@@ -215,12 +215,12 @@ function App() {
           </Card>
 
           <Card className="border-gray-100 hover:shadow-md transition-shadow">
-            <CardHeader className="pb-3">
-              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total House Appropriations</CardDescription>
+            <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
+              <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Total House Appropriations</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-gray-900">₱{formatCurrency(stats.totalHouse * 1000)}</div>
-              <div className="mt-2 flex items-center text-sm">
+            <CardContent className="p-3 sm:p-6 pt-0">
+              <div className="text-lg sm:text-2xl font-bold text-gray-900">₱{formatCurrency(stats.totalHouse * 1000)}</div>
+              <div className="mt-1 sm:mt-2 flex items-center text-xs sm:text-sm">
                 <span className="text-blue-600 font-medium">+0.0%</span>
                 <span className="text-gray-500 ml-2">vs last period</span>
               </div>
@@ -228,15 +228,15 @@ function App() {
           </Card>
 
           <Card className="border-gray-100 hover:shadow-md transition-shadow">
-            <CardHeader className="pb-3">
-              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Increases</CardDescription>
+            <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
+              <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Total Increases</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-green-600 flex items-center gap-2">
-                <TrendingUp className="w-6 h-6" />
+            <CardContent className="p-3 sm:p-6 pt-0">
+              <div className="text-lg sm:text-2xl font-bold text-green-600 flex items-center gap-1 sm:gap-2">
+                <TrendingUp className="w-4 h-4 sm:w-6 sm:h-6" />
                 ₱{formatCurrency(stats.totalIncrease * 1000)}
               </div>
-              <div className="mt-2 flex items-center text-sm">
+              <div className="mt-1 sm:mt-2 flex items-center text-xs sm:text-sm">
                 <span className="text-green-600 font-medium">Positive</span>
                 <span className="text-gray-500 ml-2">budget increase</span>
               </div>
@@ -244,15 +244,15 @@ function App() {
           </Card>
 
           <Card className="border-gray-100 hover:shadow-md transition-shadow">
-            <CardHeader className="pb-3">
-              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Decreases</CardDescription>
+            <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
+              <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Total Decreases</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-red-600 flex items-center gap-2">
-                <TrendingDown className="w-6 h-6" />
+            <CardContent className="p-3 sm:p-6 pt-0">
+              <div className="text-lg sm:text-2xl font-bold text-red-600 flex items-center gap-1 sm:gap-2">
+                <TrendingDown className="w-4 h-4 sm:w-6 sm:h-6" />
                 ₱{formatCurrency(Math.abs(stats.totalDecrease) * 1000)}
               </div>
-              <div className="mt-2 flex items-center text-sm">
+              <div className="mt-1 sm:mt-2 flex items-center text-xs sm:text-sm">
                 <span className="text-red-600 font-medium">Negative</span>
                 <span className="text-gray-500 ml-2">budget decrease</span>
               </div>
@@ -260,12 +260,12 @@ function App() {
           </Card>
 
           <Card className="border-gray-100 hover:shadow-md transition-shadow">
-            <CardHeader className="pb-3">
-              <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Automatic Appropriations</CardDescription>
+            <CardHeader className="pb-2 sm:pb-3 p-3 sm:p-6">
+              <CardDescription className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide">Automatic Appropriations</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-gray-900">₱{formatCurrency(AUTOMATIC_APPROPRIATIONS)}</div>
-              <div className="mt-2 flex items-center text-sm">
+            <CardContent className="p-3 sm:p-6 pt-0">
+              <div className="text-lg sm:text-2xl font-bold text-gray-900">₱{formatCurrency(AUTOMATIC_APPROPRIATIONS)}</div>
+              <div className="mt-1 sm:mt-2 flex items-center text-xs sm:text-sm">
                 <span className="text-gray-600 font-medium">Fixed</span>
                 <span className="text-gray-500 ml-2">appropriation</span>
               </div>
@@ -281,8 +281,8 @@ function App() {
   const TableViewPage = () => (
     <>
       {(searchTerm || levelFilter) && (
-        <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-          <p className="text-sm text-blue-900">
+        <div className="mb-2 sm:mb-4 p-2 sm:p-3 bg-blue-50 border border-blue-200 rounded-lg">
+          <p className="text-xs sm:text-sm text-blue-900">
             <strong>Filtered:</strong> Showing {filteredData.length} of {data.length} entries
             {searchTerm && ` matching "${searchTerm}"`}
             {levelFilter && ` • Level: ${levelFilter}`}
@@ -291,13 +291,13 @@ function App() {
       )}
 
       <Card className="border-gray-100 shadow-sm">
-        <CardHeader>
-          <CardTitle>Budget Data Table</CardTitle>
-          <CardDescription>
+        <CardHeader className="p-3 sm:p-6">
+          <CardTitle className="text-lg sm:text-2xl">Budget Data Table</CardTitle>
+          <CardDescription className="text-xs sm:text-sm">
             Complete budget data with filtering and sorting capabilities. All amounts in thousand pesos.
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="p-2 sm:p-6">
           <DataTable data={filteredData} />
         </CardContent>
       </Card>
