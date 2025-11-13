@@ -42,9 +42,9 @@ function App() {
   const filteredData = useMemo(() => {
     return data.filter(row => {
       const matchesSearch =
-        row.Department_Name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        row.Agency_Name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        row.Sub_Agency_Name.toLowerCase().includes(searchTerm.toLowerCase());
+        (row.Department_Name?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
+        (row.Agency_Name?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
+        (row.Sub_Agency_Name?.toLowerCase() || '').includes(searchTerm.toLowerCase());
 
       const matchesLevel = !levelFilter || row.Level === levelFilter;
 
@@ -55,12 +55,22 @@ function App() {
   const stats = useMemo(() => {
     // If we have the Summary level in filtered data, use it
     const summaryRow = filteredData.find(d => d.Level === 'Summary' && d.Department_Name === 'TOTAL_NEW_APPROPRIATIONS');
-    
+
     // Otherwise, compute totals from filtered data
     if (!summaryRow) {
+      // Determine the most granular level in the filtered data to avoid double-counting
+      const levels = new Set(filteredData.map(d => d.Level).filter(l => l !== 'Summary'));
+
+      // Priority: Sub-Agency > Agency > Department > Special Purpose Fund
+      let targetLevel = null;
+      if (levels.has('Sub-Agency')) targetLevel = 'Sub-Agency';
+      else if (levels.has('Agency')) targetLevel = 'Agency';
+      else if (levels.has('Department')) targetLevel = 'Department';
+      else if (levels.has('Special Purpose Fund')) targetLevel = 'Special Purpose Fund';
+
       const totals = filteredData.reduce((acc, row) => {
-        // Only sum the actual budget entries (not summary rows)
-        if (row.Level !== 'Summary') {
+        // Only sum the most granular level to avoid double-counting hierarchical data
+        if (targetLevel && row.Level === targetLevel) {
           acc.totalHouse += row.House || 0;
           acc.totalSenate += row.Senate || 0;
           acc.totalIncrease += row.Increase || 0;
@@ -68,14 +78,14 @@ function App() {
         }
         return acc;
       }, { totalHouse: 0, totalSenate: 0, totalIncrease: 0, totalDecrease: 0 });
-      
+
       return {
         ...totals,
         departmentCount: filteredData.filter(d => d.Level === 'Department').length,
         agencyCount: filteredData.filter(d => d.Level === 'Agency').length,
       };
     }
-    
+
     // Use summary row values
     return {
       totalHouse: summaryRow.House || 0,
@@ -112,13 +122,41 @@ function App() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+      {/* Grand Totals Row */}
+      <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-5 mb-4">
+        <Card className="border-blue-200 hover:shadow-md transition-shadow">
+          <CardHeader className="pb-3">
+            <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - House</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="text-4xl font-bold text-blue-900">₱{formatCurrency((stats.totalHouse * 1000) + 227769207000)}</div>
+            <div className="mt-2 flex items-center text-sm">
+              <span className="text-blue-700 font-medium">House + Automatic</span>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-blue-200 hover:shadow-md transition-shadow">
+          <CardHeader className="pb-3">
+            <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - Senate</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="text-4xl font-bold text-blue-900">₱{formatCurrency((stats.totalSenate * 1000) + 227769207000)}</div>
+            <div className="mt-2 flex items-center text-sm">
+              <span className="text-blue-700 font-medium">Senate + Automatic</span>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 mb-4">
+
         <Card className="border-gray-100 hover:shadow-md transition-shadow">
           <CardHeader className="pb-3">
             <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Senate Appropriations</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-gray-900">₱{formatCurrency(stats.totalSenate * 1000)}</div>
+            <div className="text-2xl font-bold text-gray-900">₱{formatCurrency(stats.totalSenate * 1000)}</div>
             <div className="mt-2 flex items-center text-sm">
               <span className="text-blue-600 font-medium">+0.0%</span>
               <span className="text-gray-500 ml-2">vs last period</span>
@@ -131,7 +169,7 @@ function App() {
             <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total House Appropriations</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-gray-900">₱{formatCurrency(stats.totalHouse * 1000)}</div>
+            <div className="text-2xl font-bold text-gray-900">₱{formatCurrency(stats.totalHouse * 1000)}</div>
             <div className="mt-2 flex items-center text-sm">
               <span className="text-blue-600 font-medium">+0.0%</span>
               <span className="text-gray-500 ml-2">vs last period</span>
@@ -144,7 +182,7 @@ function App() {
             <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Increases</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-green-600 flex items-center gap-2">
+            <div className="text-2xl font-bold text-green-600 flex items-center gap-2">
               <TrendingUp className="w-6 h-6" />
               ₱{formatCurrency(stats.totalIncrease * 1000)}
             </div>
@@ -160,13 +198,26 @@ function App() {
             <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Total Decreases</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-red-600 flex items-center gap-2">
+            <div className="text-2xl font-bold text-red-600 flex items-center gap-2">
               <TrendingDown className="w-6 h-6" />
               ₱{formatCurrency(Math.abs(stats.totalDecrease) * 1000)}
             </div>
             <div className="mt-2 flex items-center text-sm">
               <span className="text-red-600 font-medium">Negative</span>
               <span className="text-gray-500 ml-2">budget decrease</span>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-gray-100 hover:shadow-md transition-shadow">
+          <CardHeader className="pb-3">
+            <CardDescription className="text-xs text-gray-500 font-medium uppercase tracking-wide">Automatic Appropriations</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-gray-900">₱{formatCurrency(2277692070000)}</div>
+            <div className="mt-2 flex items-center text-sm">
+              <span className="text-gray-600 font-medium">Fixed</span>
+              <span className="text-gray-500 ml-2">appropriation</span>
             </div>
           </CardContent>
         </Card>
