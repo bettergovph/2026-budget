@@ -41,7 +41,7 @@ export function Layout({
                 className="h-10 sm:h-12 w-auto"
               />
               <div>
-                <h2 className="text-black font-bold text-sm sm:text-base lg:text-lg">FY 2026 GAB Dashboard</h2>
+                <h2 className="text-black font-bold text-sm sm:text-base lg:text-lg">FY 2026 Budget Dashboard</h2>
                 <div className="text-xs text-gray-800">By BetterGov.ph</div>
               </div>
             </div>
