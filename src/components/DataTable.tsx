@@ -1,18 +1,38 @@
 import { useState, useMemo } from 'react';
 import { BudgetData } from '@/types/budget';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
 import { formatCurrency } from '@/lib/utils';
 
 interface DataTableProps {
   data: BudgetData[];
 }
 
-type SortKey = keyof BudgetData;
+type SortKey = 'Senate' | 'House' | 'Increase' | 'Decrease' | 'Net';
 type SortDirection = 'asc' | 'desc';
 
 export function DataTable({ data }: DataTableProps) {
   const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
+  const [sortKey, setSortKey] = useState<SortKey | null>(null);
+  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+
+  const handleSort = (key: SortKey) => {
+    if (sortKey === key) {
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortKey(key);
+      setSortDirection('desc');
+    }
+  };
+
+  const SortIcon = ({ columnKey }: { columnKey: SortKey }) => {
+    if (sortKey !== columnKey) {
+      return <ArrowUpDown className="w-3 h-3 ml-1 inline opacity-30" />;
+    }
+    return sortDirection === 'asc' ? 
+      <ArrowUp className="w-3 h-3 ml-1 inline" /> : 
+      <ArrowDown className="w-3 h-3 ml-1 inline" />;
+  };
 
   const toggleRow = (key: string) => {
     const newExpanded = new Set(expandedRows);
@@ -24,7 +44,7 @@ export function DataTable({ data }: DataTableProps) {
     setExpandedRows(newExpanded);
   };
 
-  // Build hierarchical structure
+  // Build hierarchical structure with sorting
   const hierarchicalData = useMemo(() => {
     // Data is already filtered globally, so just build the structure
     const structure: {
@@ -111,8 +131,18 @@ export function DataTable({ data }: DataTableProps) {
       }
     });
 
+    // Sort departments if sortKey is set
+    if (sortKey) {
+      const sortedDepts = Array.from(structure.departments.entries()).sort((a, b) => {
+        const aVal = a[1].dept[sortKey] || 0;
+        const bVal = b[1].dept[sortKey] || 0;
+        return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+      });
+      structure.departments = new Map(sortedDepts);
+    }
+    
     return structure;
-  }, [data]);
+  }, [data, sortKey, sortDirection]);
 
   return (
     <div className="space-y-4">
@@ -122,11 +152,36 @@ export function DataTable({ data }: DataTableProps) {
             <TableRow>
               <TableHead className="w-12"></TableHead>
               <TableHead>Department / Agency / Sub-Agency</TableHead>
-              <TableHead className="text-right bg-blue-50">Senate</TableHead>
-              <TableHead className="text-right">House</TableHead>
-              <TableHead className="text-right">Increased by Senate</TableHead>
-              <TableHead className="text-right">Decreased by Senate</TableHead>
-              <TableHead className="text-right">Net</TableHead>
+              <TableHead 
+                className="text-right bg-blue-50 cursor-pointer hover:bg-blue-100" 
+                onClick={() => handleSort('Senate')}
+              >
+                Senate <SortIcon columnKey="Senate" />
+              </TableHead>
+              <TableHead 
+                className="text-right cursor-pointer hover:bg-gray-50" 
+                onClick={() => handleSort('House')}
+              >
+                House <SortIcon columnKey="House" />
+              </TableHead>
+              <TableHead 
+                className="text-right cursor-pointer hover:bg-gray-50" 
+                onClick={() => handleSort('Increase')}
+              >
+                Increased by Senate <SortIcon columnKey="Increase" />
+              </TableHead>
+              <TableHead 
+                className="text-right cursor-pointer hover:bg-gray-50" 
+                onClick={() => handleSort('Decrease')}
+              >
+                Decreased by Senate <SortIcon columnKey="Decrease" />
+              </TableHead>
+              <TableHead 
+                className="text-right cursor-pointer hover:bg-gray-50" 
+                onClick={() => handleSort('Net')}
+              >
+                Net <SortIcon columnKey="Net" />
+              </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -231,6 +286,7 @@ export function DataTable({ data }: DataTableProps) {
 
       <div className="text-sm text-muted-foreground">
         Showing {hierarchicalData.summary.length + hierarchicalData.departments.size} top-level entries. All amounts in pesos.
+        {sortKey && <span className="ml-2">• Sorted by {sortKey} ({sortDirection})</span>}
       </div>
     </div>
   );
