@@ -129,7 +129,7 @@ function App() {
             <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - House</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="text-4xl font-bold text-blue-900">₱{formatCurrency((stats.totalHouse * 1000) + 227769207000)}</div>
+            <div className="text-4xl font-bold text-blue-900">₱{formatCurrency((stats.totalHouse * 1000) + 2277692070000)}</div>
             <div className="mt-2 flex items-center text-sm">
               <span className="text-blue-700 font-medium">House + Automatic</span>
             </div>
@@ -141,7 +141,7 @@ function App() {
             <CardDescription className="text-xs text-blue-700 font-semibold uppercase tracking-wide">Grand Total - Senate</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="text-4xl font-bold text-blue-900">₱{formatCurrency((stats.totalSenate * 1000) + 227769207000)}</div>
+            <div className="text-4xl font-bold text-blue-900">₱{formatCurrency((stats.totalSenate * 1000) + 2277692070000)}</div>
             <div className="mt-2 flex items-center text-sm">
               <span className="text-blue-700 font-medium">Senate + Automatic</span>
             </div>
