@@ -50,21 +50,19 @@ export function Layout({
               <div className="flex gap-6">
                 <Link
                   to="/"
-                  className={`text-sm font-medium transition-colors ${
-                    location.pathname === '/'
+                  className={`text-sm font-medium transition-colors ${location.pathname === '/'
                       ? 'text-blue-600 underline'
                       : 'text-gray-600 hover:text-gray-900 hover:underline'
-                  }`}
+                    }`}
                 >
                   Overview
                 </Link>
                 <Link
                   to="/table"
-                  className={`text-sm font-medium transition-colors ${
-                    location.pathname === '/table'
+                  className={`text-sm font-medium transition-colors ${location.pathname === '/table'
                       ? 'text-blue-600 underline'
                       : 'text-gray-600 hover:text-gray-900 hover:underline'
-                  }`}
+                    }`}
                 >
                   Table View
                 </Link>
