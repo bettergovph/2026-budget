@@ -14,21 +14,36 @@ const AUTOMATIC_APPROPRIATIONS = 2277692070000; // In pesos
 const NEP_2026_TOTAL = 6793162000000; // In pesos
 
 function App() {
-  const [data, setData] = useState<BudgetData[]>([]);
+  const [data, setData] = useState<BudgetData[]>([]); // 3rd reading data (current)
+  const [oldData, setOldData] = useState<BudgetData[]>([]); // Original 2026 data
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('');
 
   useEffect(() => {
-    fetch('/2026-3rd.csv')
-      .then(response => response.text())
-      .then(csv => {
-        Papa.parse<BudgetData>(csv, {
+    // Load both CSV files
+    Promise.all([
+      fetch('/2026-3rd.csv').then(response => response.text()),
+      fetch('/2026.csv').then(response => response.text())
+    ])
+      .then(([csv3rd, csvOld]) => {
+        // Parse 3rd reading data (current)
+        Papa.parse<BudgetData>(csv3rd, {
           header: true,
           dynamicTyping: true,
           skipEmptyLines: true,
           complete: (results) => {
             setData(results.data);
+          },
+        });
+        
+        // Parse old data
+        Papa.parse<BudgetData>(csvOld, {
+          header: true,
+          dynamicTyping: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            setOldData(results.data);
             setLoading(false);
           },
         });
@@ -134,7 +149,7 @@ function App() {
         {/* Disclaimer */}
         <div className="mb-3 sm:mb-6 p-2 sm:p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
           <p className="text-xs sm:text-sm text-yellow-900">
-            <strong>⚠️ Note:</strong>  The P6.7 trillion proposed budget for 2026 is now being discussed at
+            <strong>⚠️ Note:</strong> This dashboard now shows the <strong>3rd Reading</strong> version of the Senate GAB. The P6.7 trillion proposed budget for 2026 is now being discussed at
             the Senate Plenary. This tracker covers only New Appropriations in the final House General
             Appropriations Bill (House) and the Senate Committee Report (Senate).
             We are still reconciling data with the National Expenditure Program proposed by the President.
@@ -298,13 +313,13 @@ function App() {
 
       <Card className="border-gray-100 shadow-sm">
         <CardHeader className="p-3 sm:p-6">
-          <CardTitle className="text-lg sm:text-2xl">Budget Data Table</CardTitle>
+          <CardTitle className="text-lg sm:text-2xl">Budget Data Table - 3rd Reading</CardTitle>
           <CardDescription className="text-xs sm:text-sm">
-            Complete budget data with filtering and sorting capabilities. All amounts in thousand pesos.
+            Complete budget data with filtering and sorting capabilities. Showing 3rd reading numbers with previous amounts below. All amounts in thousand pesos.
           </CardDescription>
         </CardHeader>
         <CardContent className="p-2 sm:p-6">
-          <DataTable data={filteredData} />
+          <DataTable data={filteredData} oldData={oldData} />
         </CardContent>
       </Card>
     </>

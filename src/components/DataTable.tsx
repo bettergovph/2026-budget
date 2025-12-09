@@ -6,12 +6,66 @@ import { formatCurrency } from '@/lib/utils';
 
 interface DataTableProps {
   data: BudgetData[];
+  oldData: BudgetData[];
 }
 
 type SortKey = 'Senate' | 'House' | 'Increase' | 'Decrease' | 'Net';
 type SortDirection = 'asc' | 'desc';
 
-export function DataTable({ data }: DataTableProps) {
+export function DataTable({ data, oldData }: DataTableProps) {
+  // Helper function to normalize codes by removing periods for consistent matching
+  const normalizeCode = (code: string): string => {
+    return (code || '').replace(/\./g, '');
+  };
+
+  // Create a map of old data for quick lookups
+  const oldDataMap = useMemo(() => {
+    const map = new Map<string, BudgetData>();
+    oldData.forEach(row => {
+      const key = `${row.Level}-${normalizeCode(row.Department_Code)}-${normalizeCode(row.Agency_Code)}-${normalizeCode(row.Sub_Agency_Code)}`;
+      map.set(key, row);
+    });
+    return map;
+  }, [oldData]);
+
+  const getOldValue = (row: BudgetData, field: 'Senate' | 'House' | 'Increase' | 'Decrease' | 'Net'): number | null => {
+    const key = `${row.Level}-${normalizeCode(row.Department_Code)}-${normalizeCode(row.Agency_Code)}-${normalizeCode(row.Sub_Agency_Code)}`;
+    const oldRow = oldDataMap.get(key);
+    return oldRow ? oldRow[field] : null;
+  };
+
+  // Component to render a cell with current value and old value below
+  const ValueCell = ({ row, field, className = '', isBold = false }: { 
+    row: BudgetData; 
+    field: 'Senate' | 'House' | 'Increase' | 'Decrease' | 'Net';
+    className?: string;
+    isBold?: boolean;
+  }) => {
+    const currentValue = row[field] * 1000;
+    const oldValue = getOldValue(row, field);
+    const hasChanged = oldValue !== null && oldValue !== row[field];
+    
+    return (
+      <TableCell className={`text-right font-mono py-2 sm:py-4 ${className}`}>
+        <div className={`text-xs sm:text-sm ${isBold ? 'font-bold' : ''}`}>
+          {formatCurrency(currentValue)}
+        </div>
+        {oldValue !== null && (
+          <div className={`text-[9px] sm:text-[10px] mt-0.5 ${
+            hasChanged ? 'text-gray-500' : 'text-gray-400'
+          }`}>
+            {hasChanged && (
+              <span className="mr-1">
+                {currentValue > (oldValue * 1000) ? '↑' : currentValue < (oldValue * 1000) ? '↓' : '='}
+              </span>
+            )}
+            {formatCurrency(oldValue * 1000)}
+          </div>
+        )}
+      </TableCell>
+    );
+  };
+
   const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
   const [sortKey, setSortKey] = useState<SortKey | null>(null);
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
@@ -190,11 +244,11 @@ export function DataTable({ data }: DataTableProps) {
               <TableRow key={`summary-${idx}`} className="bg-blue-50 font-semibold">
                 <TableCell></TableCell>
                 <TableCell className="font-bold text-xs sm:text-sm">{row.Department_Name.replace(/_/g, ' ')}</TableCell>
-                <TableCell className="text-right font-mono bg-blue-100 font-bold text-xs sm:text-sm">{formatCurrency(row.Senate * 1000)}</TableCell>
-                <TableCell className="text-right font-mono text-xs sm:text-sm">{formatCurrency(row.House * 1000)}</TableCell>
-                <TableCell className="text-right font-mono text-green-600 text-xs sm:text-sm">{formatCurrency(row.Increase * 1000)}</TableCell>
-                <TableCell className="text-right font-mono text-red-600 text-xs sm:text-sm">{formatCurrency(row.Decrease * 1000)}</TableCell>
-                <TableCell className="text-right font-mono text-xs sm:text-sm">{formatCurrency(row.Net * 1000)}</TableCell>
+                <ValueCell row={row} field="Senate" className="bg-blue-100" isBold={true} />
+                <ValueCell row={row} field="House" />
+                <ValueCell row={row} field="Increase" className="text-green-600" />
+                <ValueCell row={row} field="Decrease" className="text-red-600" />
+                <ValueCell row={row} field="Net" />
               </TableRow>
             ))}
 
@@ -219,11 +273,11 @@ export function DataTable({ data }: DataTableProps) {
                       )}
                     </TableCell>
                     <TableCell className="font-semibold text-xs sm:text-sm py-2 sm:py-4">{deptData.dept.Department_Name}</TableCell>
-                    <TableCell className="text-right font-mono bg-blue-50 font-semibold text-xs sm:text-sm py-2 sm:py-4">{formatCurrency(deptData.dept.Senate * 1000)}</TableCell>
-                    <TableCell className="text-right font-mono text-xs sm:text-sm py-2 sm:py-4">{formatCurrency(deptData.dept.House * 1000)}</TableCell>
-                    <TableCell className="text-right font-mono text-green-600 text-xs sm:text-sm py-2 sm:py-4">{formatCurrency(deptData.dept.Increase * 1000)}</TableCell>
-                    <TableCell className="text-right font-mono text-red-600 text-xs sm:text-sm py-2 sm:py-4">{formatCurrency(deptData.dept.Decrease * 1000)}</TableCell>
-                    <TableCell className="text-right font-mono text-xs sm:text-sm py-2 sm:py-4">{formatCurrency(deptData.dept.Net * 1000)}</TableCell>
+                    <ValueCell row={deptData.dept} field="Senate" className="bg-blue-50" isBold={true} />
+                    <ValueCell row={deptData.dept} field="House" />
+                    <ValueCell row={deptData.dept} field="Increase" className="text-green-600" />
+                    <ValueCell row={deptData.dept} field="Decrease" className="text-red-600" />
+                    <ValueCell row={deptData.dept} field="Net" />
                   </TableRow>
 
                   {/* Agency Rows (shown when department is expanded) */}
@@ -247,11 +301,11 @@ export function DataTable({ data }: DataTableProps) {
                             )}
                           </TableCell>
                           <TableCell className="pl-4 sm:pl-6 text-xs sm:text-sm py-2 sm:py-4">{agencyData.agency.Agency_Name}</TableCell>
-                          <TableCell className="text-right font-mono text-xs bg-blue-50 py-2 sm:py-4">{formatCurrency(agencyData.agency.Senate * 1000)}</TableCell>
-                          <TableCell className="text-right font-mono text-xs py-2 sm:py-4">{formatCurrency(agencyData.agency.House * 1000)}</TableCell>
-                          <TableCell className="text-right font-mono text-xs text-green-600 py-2 sm:py-4">{formatCurrency(agencyData.agency.Increase * 1000)}</TableCell>
-                          <TableCell className="text-right font-mono text-xs text-red-600 py-2 sm:py-4">{formatCurrency(agencyData.agency.Decrease * 1000)}</TableCell>
-                          <TableCell className="text-right font-mono text-xs py-2 sm:py-4">{formatCurrency(agencyData.agency.Net * 1000)}</TableCell>
+                          <ValueCell row={agencyData.agency} field="Senate" className="bg-blue-50" />
+                          <ValueCell row={agencyData.agency} field="House" />
+                          <ValueCell row={agencyData.agency} field="Increase" className="text-green-600" />
+                          <ValueCell row={agencyData.agency} field="Decrease" className="text-red-600" />
+                          <ValueCell row={agencyData.agency} field="Net" />
                         </TableRow>
 
                         {/* Sub-Agency Rows (shown when agency is expanded) */}
@@ -259,11 +313,11 @@ export function DataTable({ data }: DataTableProps) {
                           <TableRow key={`sub-${deptCode}-${agencyCode}-${idx}`} className="hover:bg-gray-50">
                             <TableCell></TableCell>
                             <TableCell className="pl-8 sm:pl-12 text-[10px] sm:text-sm text-gray-600 py-2 sm:py-4">{subAgency.Sub_Agency_Name}</TableCell>
-                            <TableCell className="text-right font-mono text-[10px] sm:text-xs bg-blue-50 py-2 sm:py-4">{formatCurrency(subAgency.Senate * 1000)}</TableCell>
-                            <TableCell className="text-right font-mono text-[10px] sm:text-xs py-2 sm:py-4">{formatCurrency(subAgency.House * 1000)}</TableCell>
-                            <TableCell className="text-right font-mono text-[10px] sm:text-xs text-green-600 py-2 sm:py-4">{formatCurrency(subAgency.Increase * 1000)}</TableCell>
-                            <TableCell className="text-right font-mono text-[10px] sm:text-xs text-red-600 py-2 sm:py-4">{formatCurrency(subAgency.Decrease * 1000)}</TableCell>
-                            <TableCell className="text-right font-mono text-[10px] sm:text-xs py-2 sm:py-4">{formatCurrency(subAgency.Net * 1000)}</TableCell>
+                            <ValueCell row={subAgency} field="Senate" className="bg-blue-50" />
+                            <ValueCell row={subAgency} field="House" />
+                            <ValueCell row={subAgency} field="Increase" className="text-green-600" />
+                            <ValueCell row={subAgency} field="Decrease" className="text-red-600" />
+                            <ValueCell row={subAgency} field="Net" />
                           </TableRow>
                         ))}
                       </>
