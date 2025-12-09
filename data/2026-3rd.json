@@ -1,0 +1,4143 @@
+{
+  "COMMITTEE_REPORT_HBN_4058": {
+    "title": "COMMITTEE REPORT (INCLUDING AMENDMENTS) ON HOUSE BILL NO. (HBN) 4058 (FY 2026 GENERAL APPROPRIATIONS BILL)",
+    "unit": "In Thousand Pesos",
+    "summary": {
+      "PROGRAMMED_APPROPRIATIONS": {
+        "house": 4402808041,
+        "increase": 358626590,
+        "decrease": -358626590,
+        "net": 0,
+        "senate": 4402808041
+      },
+      "Departments": {
+        "house": 3702417193,
+        "increase": 283089007,
+        "decrease": -277589695,
+        "net": 5499312,
+        "senate": 3707916505
+      },
+      "Special_Purpose_Funds": {
+        "house": 700390848,
+        "increase": 75537583,
+        "decrease": -81036895,
+        "net": -5499312,
+        "senate": 694891536
+      },
+      "UNPROGRAMMED_APPROPRIATIONS": {
+        "house": 243222549,
+        "increase": 4237261,
+        "decrease": -72904270,
+        "net": -68667009,
+        "senate": 174555540
+      },
+      "TOTAL_NEW_APPROPRIATIONS": {
+        "house": 4646030590,
+        "increase": 362863851,
+        "decrease": -431530860,
+        "net": -68667009,
+        "senate": 4577363581
+      }
+    },
+    "DEPARTMENTS": [
+      {
+        "code": "I.",
+        "name": "CONGRESS OF THE PHILIPPINES",
+        "house": 37196133,
+        "increase": 1404079,
+        "decrease": 0,
+        "net": 1404079,
+        "senate": 38600212,
+        "agencies": [
+          {
+            "code": "A.",
+            "name": "Senate",
+            "house": 7520988,
+            "increase": 1051000,
+            "decrease": 0,
+            "net": 1051000,
+            "senate": 8571988
+          },
+          {
+            "code": "B.",
+            "name": "Senate Electoral Tribunal",
+            "house": 329888,
+            "increase": 60000,
+            "decrease": 0,
+            "net": 60000,
+            "senate": 389888
+          },
+          {
+            "code": "C.",
+            "name": "Commission on Appointments",
+            "house": 1387177,
+            "increase": 293079,
+            "decrease": 0,
+            "net": 293079,
+            "senate": 1680256
+          },
+          {
+            "code": "D.",
+            "name": "House of Representatives",
+            "house": 27702099,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 27702099
+          },
+          {
+            "code": "E.",
+            "name": "House of Representatives Electoral Tribunal",
+            "house": 255981,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 255981
+          }
+        ]
+      },
+      {
+        "code": "II.",
+        "name": "OFFICE OF THE PRESIDENT",
+        "house": 27286435,
+        "increase": 742298,
+        "decrease": 0,
+        "net": 742298,
+        "senate": 28028733,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "The President's Offices",
+            "house": 27286435,
+            "increase": 742298,
+            "decrease": 0,
+            "net": 742298,
+            "senate": 28028733
+          }
+        ]
+      },
+      {
+        "code": "III.",
+        "name": "OFFICE OF THE VICE-PRESIDENT",
+        "house": 733198,
+        "increase": 156038,
+        "decrease": 0,
+        "net": 156038,
+        "senate": 889236,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Vice-President",
+            "house": 733198,
+            "increase": 156038,
+            "decrease": 0,
+            "net": 156038,
+            "senate": 889236
+          }
+        ]
+      },
+      {
+        "code": "IV.",
+        "name": "DEPARTMENT OF AGRARIAN REFORM",
+        "house": 16718499,
+        "increase": 200000,
+        "decrease": 0,
+        "net": 200000,
+        "senate": 16918499,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 16718499,
+            "increase": 200000,
+            "decrease": 0,
+            "net": 200000,
+            "senate": 16918499
+          }
+        ]
+      },
+      {
+        "code": "V.",
+        "name": "DEPARTMENT OF AGRICULTURE",
+        "house": 180285190,
+        "increase": 21360162,
+        "decrease": -42619273,
+        "net": -21259111,
+        "senate": 159026079,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 162033630,
+            "increase": 19387021,
+            "decrease": -42619273,
+            "net": -23232252,
+            "senate": 138801378
+          },
+          {
+            "code": "B",
+            "name": "Agricultural Credit Policy Council",
+            "house": 2864121,
+            "increase": 250000,
+            "decrease": 0,
+            "net": 250000,
+            "senate": 3114121
+          },
+          {
+            "code": "C.",
+            "name": "Bureau of Fisheries and Aquatic Resources",
+            "house": 11162420,
+            "increase": 602000,
+            "decrease": 0,
+            "net": 602000,
+            "senate": 11764420
+          },
+          {
+            "code": "D.",
+            "name": "Fertilizer and Pesticide Authority",
+            "house": 423233,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 423233
+          },
+          {
+            "code": "E",
+            "name": "National Fisheries Research and Development Institute",
+            "house": 743511,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 743511
+          },
+          {
+            "code": "F",
+            "name": "National Meat Inspection Service",
+            "house": 677494,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 677494
+          },
+          {
+            "code": "G.",
+            "name": "Philippine Carabao Center",
+            "house": 959337,
+            "increase": 1121141,
+            "decrease": 0,
+            "net": 1121141,
+            "senate": 2080478
+          },
+          {
+            "code": "H.",
+            "name": "Philippine Center for Post-Harvest Development and Mechanization",
+            "house": 479892,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 479892
+          },
+          {
+            "code": "I",
+            "name": "Philippine Council for Agriculture and Fisheries",
+            "house": 264404,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 264404
+          },
+          {
+            "code": "J",
+            "name": "Philippine Fiber Industry Development Authority",
+            "house": 677148,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 677148
+          }
+        ]
+      },
+      {
+        "code": "VI.",
+        "name": "DEPARTMENT OF BUDGET AND MANAGEMENT",
+        "house": 3464394,
+        "increase": 0,
+        "decrease": 0,
+        "net": 0,
+        "senate": 3464394,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 3282641,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 3282641
+          },
+          {
+            "code": "B.",
+            "name": "Government Procurement Policy Board - Technical Support Office",
+            "house": 181753,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 181753
+          }
+        ]
+      },
+      {
+        "code": "VII.",
+        "name": "DEPARTMENT OF ECONOMY, PLANNING AND DEVELOPMENT",
+        "house": 13726195,
+        "increase": 250067,
+        "decrease": 0,
+        "net": 250067,
+        "senate": 13976262,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 2706733,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 2706733
+          },
+          {
+            "code": "B",
+            "name": "Commission on Population and Development",
+            "house": 696419,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 696419
+          },
+          {
+            "code": "C.",
+            "name": "Philippine National Volunteer Service Coordinating Agency",
+            "house": 39011,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 39011
+          },
+          {
+            "code": "D.",
+            "name": "Public-Private Partnership Center of the Philippines",
+            "house": 1168111,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1168111
+          },
+          {
+            "code": "E",
+            "name": "Philippine Statistical Research and Training Institute",
+            "house": 152320,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 152320
+          },
+          {
+            "code": "F.",
+            "name": "Philippine Statistics Authority",
+            "house": 8838921,
+            "increase": 250067,
+            "decrease": 0,
+            "net": 250067,
+            "senate": 9088988
+          },
+          {
+            "code": "G.",
+            "name": "Tariff Commission",
+            "house": 124680,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 124680
+          }
+        ]
+      },
+      {
+        "code": "VIII.",
+        "name": "DEPARTMENT OF EDUCATION",
+        "house": 914144842,
+        "increase": 76889790,
+        "decrease": -3530277,
+        "net": 73359513,
+        "senate": 987504355,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 912498878,
+            "increase": 75908237,
+            "decrease": -3530277,
+            "net": 72377960,
+            "senate": 984876838
+          },
+          {
+            "code": "B.",
+            "name": "National Academy of Sports",
+            "house": 246377,
+            "increase": 294510,
+            "decrease": 0,
+            "net": 294510,
+            "senate": 540887
+          },
+          {
+            "code": "C.",
+            "name": "National Book Development Board",
+            "house": 152057,
+            "increase": 50000,
+            "decrease": 0,
+            "net": 50000,
+            "senate": 202057
+          },
+          {
+            "code": "D.",
+            "name": "National Council for Children's Television",
+            "house": 71264,
+            "increase": 45000,
+            "decrease": 0,
+            "net": 45000,
+            "senate": 116264
+          },
+          {
+            "code": "E",
+            "name": "National Museum of the Philippines",
+            "house": 811964,
+            "increase": 175000,
+            "decrease": 0,
+            "net": 175000,
+            "senate": 986964
+          },
+          {
+            "code": "F.",
+            "name": "Philippine High School for the Arts",
+            "house": 157231,
+            "increase": 61223,
+            "decrease": 0,
+            "net": 61223,
+            "senate": 218454
+          },
+          {
+            "code": "G.",
+            "name": "Teacher Education Council",
+            "house": 207071,
+            "increase": 355820,
+            "decrease": 0,
+            "net": 355820,
+            "senate": 562891
+          }
+        ]
+      },
+      {
+        "code": "IX.",
+        "name": "STATE UNIVERSITIES AND COLLEGES",
+        "house": 131685050,
+        "increase": 7355565,
+        "decrease": -3500,
+        "net": 7352065,
+        "senate": 139037115,
+        "agencies": [
+          {
+            "code": "A.",
+            "name": "UNIVERSITY OF THE PHILIPPINES (THE NATIONAL UNIVERSITY)",
+            "house": 26910984,
+            "increase": 2889367,
+            "decrease": -3500,
+            "net": 2885867,
+            "senate": 29796851,
+            "sub_agencies": [
+              {
+                "code": "A.1",
+                "name": "University of the Philippines System",
+                "house": 26838912,
+                "increase": 2885867,
+                "decrease": 0,
+                "net": 2885867,
+                "senate": 29724779
+              },
+              {
+                "code": "A.2",
+                "name": "Philippine Energy Research and Policy Institute",
+                "house": 72072,
+                "increase": 3500,
+                "decrease": -3500,
+                "net": 0,
+                "senate": 72072
+              }
+            ]
+          },
+          {
+            "code": "B.",
+            "name": "NATIONAL CAPITAL REGION",
+            "house": 9189153,
+            "increase": 253575,
+            "decrease": 0,
+            "net": 253575,
+            "senate": 9442728,
+            "sub_agencies": [
+              {
+                "code": "B.1",
+                "name": "Eulogio \"Amang\" Rodriguez Institute of Science and Technology",
+                "house": 520947,
+                "increase": 12325,
+                "decrease": 0,
+                "net": 12325,
+                "senate": 533272
+              },
+              {
+                "code": "B.2",
+                "name": "Marikina Polytechnic College",
+                "house": 317171,
+                "increase": 18750,
+                "decrease": 0,
+                "net": 18750,
+                "senate": 335921
+              },
+              {
+                "code": "B.3",
+                "name": "Philippine Normal University",
+                "house": 1533269,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 1570769
+              },
+              {
+                "code": "B.4",
+                "name": "Philippine State College of Aeronautics",
+                "house": 514149,
+                "increase": 15000,
+                "decrease": 0,
+                "net": 15000,
+                "senate": 529149
+              },
+              {
+                "code": "B.5",
+                "name": "Polytechnic University of the Philippines",
+                "house": 3678196,
+                "increase": 115000,
+                "decrease": 0,
+                "net": 115000,
+                "senate": 3793196
+              },
+              {
+                "code": "B.6",
+                "name": "Rizal Technological University",
+                "house": 1108552,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 1108552
+              },
+              {
+                "code": "B.7",
+                "name": "Technological University of the Philippines",
+                "house": 1516869,
+                "increase": 55000,
+                "decrease": 0,
+                "net": 55000,
+                "senate": 1571869
+              }
+            ]
+          },
+          {
+            "code": "C.",
+            "name": "REGION I ILOCOS",
+            "house": 6916227,
+            "increase": 198750,
+            "decrease": 0,
+            "net": 198750,
+            "senate": 7114977,
+            "sub_agencies": [
+              {
+                "code": "C.1",
+                "name": "Don Mariano Marcos Memorial State University",
+                "house": 1771527,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1827777
+              },
+              {
+                "code": "C.2",
+                "name": "Ilocos Sur Polytechnic State College",
+                "house": 706720,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 762970
+              },
+              {
+                "code": "C.3",
+                "name": "Mariano Marcos State University",
+                "house": 1752921,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 1752921
+              },
+              {
+                "code": "C.4",
+                "name": "Pangasinan State University",
+                "house": 1723093,
+                "increase": 30000,
+                "decrease": 0,
+                "net": 30000,
+                "senate": 1753093
+              },
+              {
+                "code": "C.5",
+                "name": "University of Northern Philippines",
+                "house": 961966,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1018216
+              }
+            ]
+          },
+          {
+            "code": "D.",
+            "name": "CORDILLERA ADMINISTRATIVE REGION",
+            "house": 3423843,
+            "increase": 187500,
+            "decrease": 0,
+            "net": 187500,
+            "senate": 3611343,
+            "sub_agencies": [
+              {
+                "code": "D.1",
+                "name": "Abra State Institute of Sciences and Technology",
+                "house": 364038,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 401538
+              },
+              {
+                "code": "D.2",
+                "name": "Apayao State College",
+                "house": 319666,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 357166
+              },
+              {
+                "code": "D.3",
+                "name": "Benguet State University",
+                "house": 1042488,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 1079988
+              },
+              {
+                "code": "D.4",
+                "name": "Ifugao State University",
+                "house": 726182,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 726182
+              },
+              {
+                "code": "D.5",
+                "name": "Kalinga State University",
+                "house": 475865,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 513365
+              },
+              {
+                "code": "D.6",
+                "name": "Mountain Province State University",
+                "house": 495604,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 533104
+              }
+            ]
+          },
+          {
+            "code": "E",
+            "name": "REGION II - CAGAYAN VALLEY",
+            "house": 5003874,
+            "increase": 126500,
+            "decrease": 0,
+            "net": 126500,
+            "senate": 5130374,
+            "sub_agencies": [
+              {
+                "code": "E.1",
+                "name": "Batanes State College",
+                "house": 183055,
+                "increase": 15000,
+                "decrease": 0,
+                "net": 15000,
+                "senate": 198055
+              },
+              {
+                "code": "E.2",
+                "name": "Cagayan State University",
+                "house": 1489305,
+                "increase": 58250,
+                "decrease": 0,
+                "net": 58250,
+                "senate": 1547555
+              },
+              {
+                "code": "E.3",
+                "name": "Isabela State University",
+                "house": 2076989,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 2076989
+              },
+              {
+                "code": "E4",
+                "name": "Nueva Vizcaya State University",
+                "house": 844542,
+                "increase": 27000,
+                "decrease": 0,
+                "net": 27000,
+                "senate": 871542
+              },
+              {
+                "code": "E.5",
+                "name": "Quirino State University",
+                "house": 409983,
+                "increase": 26250,
+                "decrease": 0,
+                "net": 26250,
+                "senate": 436233
+              }
+            ]
+          },
+          {
+            "code": "F.",
+            "name": "REGION III - CENTRAL LUZON",
+            "house": 10605323,
+            "increase": 522633,
+            "decrease": 0,
+            "net": 522633,
+            "senate": 11127956,
+            "sub_agencies": [
+              {
+                "code": "F.1",
+                "name": "Aurora State College of Technology",
+                "house": 360833,
+                "increase": 3136,
+                "decrease": 0,
+                "net": 3136,
+                "senate": 363969
+              },
+              {
+                "code": "F.2",
+                "name": "Bataan Peninsula State University",
+                "house": 999266,
+                "increase": 54886,
+                "decrease": 0,
+                "net": 54886,
+                "senate": 1054152
+              },
+              {
+                "code": "F.3",
+                "name": "Bulacan Agricultural State College",
+                "house": 310082,
+                "increase": 42386,
+                "decrease": 0,
+                "net": 42386,
+                "senate": 352468
+              },
+              {
+                "code": "F4",
+                "name": "Bulacan State University",
+                "house": 1976641,
+                "increase": 61136,
+                "decrease": 0,
+                "net": 61136,
+                "senate": 2037777
+              },
+              {
+                "code": "F.5",
+                "name": "Central Luzon State University",
+                "house": 1217111,
+                "increase": 52187,
+                "decrease": 0,
+                "net": 52187,
+                "senate": 1269298
+              },
+              {
+                "code": "F.6",
+                "name": "Nueva Ecija University of Science and Technology",
+                "house": 1411141,
+                "increase": 19886,
+                "decrease": 0,
+                "net": 19886,
+                "senate": 1431027
+              },
+              {
+                "code": "F.7",
+                "name": "Pampanga State Agricultural University",
+                "house": 600737,
+                "increase": 38636,
+                "decrease": 0,
+                "net": 38636,
+                "senate": 639373
+              },
+              {
+                "code": "F.8",
+                "name": "Pampanga State University",
+                "house": 1241277,
+                "increase": 35636,
+                "decrease": 0,
+                "net": 35636,
+                "senate": 1276913
+              },
+              {
+                "code": "F.9",
+                "name": "Philippine Merchant Marine Academy",
+                "house": 320429,
+                "increase": 38636,
+                "decrease": 0,
+                "net": 38636,
+                "senate": 359065
+              },
+              {
+                "code": "F.10",
+                "name": "President Ramon Magsaysay State University",
+                "house": 702648,
+                "increase": 57386,
+                "decrease": 0,
+                "net": 57386,
+                "senate": 760034
+              },
+              {
+                "code": "F.11",
+                "name": "Tarlac Agricultural University",
+                "house": 469144,
+                "increase": 60636,
+                "decrease": 0,
+                "net": 60636,
+                "senate": 529780
+              },
+              {
+                "code": "F.12",
+                "name": "Tarlac State University",
+                "house": 996014,
+                "increase": 58086,
+                "decrease": 0,
+                "net": 58086,
+                "senate": 1054100
+              }
+            ]
+          },
+          {
+            "code": "G.",
+            "name": "REGION IV-A (CALABARZON)",
+            "house": 7006955,
+            "increase": 427106,
+            "decrease": 0,
+            "net": 427106,
+            "senate": 7434061,
+            "sub_agencies": [
+              {
+                "code": "G.1",
+                "name": "Batangas State University",
+                "house": 2123267,
+                "increase": 302000,
+                "decrease": 0,
+                "net": 302000,
+                "senate": 2425267
+              },
+              {
+                "code": "G.2",
+                "name": "Cavite State University",
+                "house": 2072592,
+                "increase": 55644,
+                "decrease": 0,
+                "net": 55644,
+                "senate": 2128236
+              },
+              {
+                "code": "G.3",
+                "name": "Laguna State Polytechnic University",
+                "house": 1129567,
+                "increase": 52190,
+                "decrease": 0,
+                "net": 52190,
+                "senate": 1181757
+              },
+              {
+                "code": "G.4",
+                "name": "Southern Luzon State University",
+                "house": 760255,
+                "increase": 1136,
+                "decrease": 0,
+                "net": 1136,
+                "senate": 761391
+              },
+              {
+                "code": "G.5",
+                "name": "University of Rizal System",
+                "house": 921274,
+                "increase": 16136,
+                "decrease": 0,
+                "net": 16136,
+                "senate": 937410
+              }
+            ]
+          },
+          {
+            "code": "H.",
+            "name": "REGION IV-B (MIMAROPA)",
+            "house": 3712161,
+            "increase": 177816,
+            "decrease": 0,
+            "net": 177816,
+            "senate": 3889977,
+            "sub_agencies": [
+              {
+                "code": "H.1",
+                "name": "Marinduque State University",
+                "house": 403706,
+                "increase": 18136,
+                "decrease": 0,
+                "net": 18136,
+                "senate": 421842
+              },
+              {
+                "code": "H.2",
+                "name": "Mindoro State University",
+                "house": 456016,
+                "increase": 38636,
+                "decrease": 0,
+                "net": 38636,
+                "senate": 494652
+              },
+              {
+                "code": "H.3",
+                "name": "Occidental Mindoro State College",
+                "house": 682939,
+                "increase": 1136,
+                "decrease": 0,
+                "net": 1136,
+                "senate": 684075
+              },
+              {
+                "code": "H.4",
+                "name": "Palawan State University",
+                "house": 1039878,
+                "increase": 19886,
+                "decrease": 0,
+                "net": 19886,
+                "senate": 1059764
+              },
+              {
+                "code": "H.5",
+                "name": "Romblon State University",
+                "house": 572294,
+                "increase": 59386,
+                "decrease": 0,
+                "net": 59386,
+                "senate": 631680
+              },
+              {
+                "code": "H.6",
+                "name": "Western Philippines University",
+                "house": 557328,
+                "increase": 40636,
+                "decrease": 0,
+                "net": 40636,
+                "senate": 597964
+              }
+            ]
+          },
+          {
+            "code": "I.",
+            "name": "REGION V - BICOL",
+            "house": 6680168,
+            "increase": 360500,
+            "decrease": 0,
+            "net": 360500,
+            "senate": 7040668,
+            "sub_agencies": [
+              {
+                "code": "I.1",
+                "name": "Bicol State College of Applied Sciences and Technology",
+                "house": 303586,
+                "increase": 18750,
+                "decrease": 0,
+                "net": 18750,
+                "senate": 322336
+              },
+              {
+                "code": "I.2",
+                "name": "Bicol University",
+                "house": 1502635,
+                "increase": 89500,
+                "decrease": 0,
+                "net": 89500,
+                "senate": 1592135
+              },
+              {
+                "code": "I.3",
+                "name": "Camarines Norte State College",
+                "house": 554782,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 592282
+              },
+              {
+                "code": "I4",
+                "name": "Camarines Sur Polytechnic Colleges",
+                "house": 704304,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 760554
+              },
+              {
+                "code": "I.5",
+                "name": "Catanduanes State University",
+                "house": 768490,
+                "increase": 25000,
+                "decrease": 0,
+                "net": 25000,
+                "senate": 793490
+              },
+              {
+                "code": "I.6",
+                "name": "Central Bicol State University of Agriculture",
+                "house": 1189548,
+                "increase": 17000,
+                "decrease": 0,
+                "net": 17000,
+                "senate": 1206548
+              },
+              {
+                "code": "I.7",
+                "name": "Dr. Emilio B. Espinosa, Sr. Memorial State College of Agriculture and Technology",
+                "house": 314302,
+                "increase": 39500,
+                "decrease": 0,
+                "net": 39500,
+                "senate": 353802
+              },
+              {
+                "code": "I.8",
+                "name": "Partido State University",
+                "house": 701311,
+                "increase": 32000,
+                "decrease": 0,
+                "net": 32000,
+                "senate": 733311
+              },
+              {
+                "code": "I.9",
+                "name": "Sorsogon State University",
+                "house": 641210,
+                "increase": 45000,
+                "decrease": 0,
+                "net": 45000,
+                "senate": 686210
+              }
+            ]
+          },
+          {
+            "code": "J.",
+            "name": "REGION VI - WESTERN VISAYAS",
+            "house": 7903042,
+            "increase": 313500,
+            "decrease": 0,
+            "net": 313500,
+            "senate": 8216542,
+            "sub_agencies": [
+              {
+                "code": "J.1",
+                "name": "Aklan State University",
+                "house": 730901,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 768401
+              },
+              {
+                "code": "J.2",
+                "name": "Capiz State University",
+                "house": 1234576,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1290826
+              },
+              {
+                "code": "J.3",
+                "name": "Guimaras State University",
+                "house": 350551,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 388051
+              },
+              {
+                "code": "J.4",
+                "name": "Iloilo Science and Technology University",
+                "house": 1116556,
+                "increase": 58250,
+                "decrease": 0,
+                "net": 58250,
+                "senate": 1174806
+              },
+              {
+                "code": "J.5",
+                "name": "Iloilo State University of Fisheries Science and Technology",
+                "house": 587076,
+                "increase": 17000,
+                "decrease": 0,
+                "net": 17000,
+                "senate": 604076
+              },
+              {
+                "code": "J.6",
+                "name": "Northern Iloilo State University",
+                "house": 803477,
+                "increase": 30000,
+                "decrease": 0,
+                "net": 30000,
+                "senate": 833477
+              },
+              {
+                "code": "J.7",
+                "name": "University of Antique",
+                "house": 759454,
+                "increase": 58250,
+                "decrease": 0,
+                "net": 58250,
+                "senate": 817704
+              },
+              {
+                "code": "J.8",
+                "name": "West Visayas State University",
+                "house": 2320451,
+                "increase": 18750,
+                "decrease": 0,
+                "net": 18750,
+                "senate": 2339201
+              }
+            ]
+          },
+          {
+            "code": "K",
+            "name": "NEGROS ISLAND REGION",
+            "house": 3048169,
+            "increase": 150000,
+            "decrease": 0,
+            "net": 150000,
+            "senate": 3198169,
+            "sub_agencies": [
+              {
+                "code": "K.1",
+                "name": "Carlos Hilado Memorial State University",
+                "house": 789331,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 789331
+              },
+              {
+                "code": "K.2",
+                "name": "Central Philippines State University",
+                "house": 602252,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 639752
+              },
+              {
+                "code": "K.3",
+                "name": "Negros Oriental State University",
+                "house": 1132643,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1188893
+              },
+              {
+                "code": "K.4",
+                "name": "Siquijor State College",
+                "house": 188278,
+                "increase": 18750,
+                "decrease": 0,
+                "net": 18750,
+                "senate": 207028
+              },
+              {
+                "code": "K.5",
+                "name": "State University of Northern Negros",
+                "house": 335665,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 373165
+              }
+            ]
+          },
+          {
+            "code": "L",
+            "name": "REGION VII - CENTRAL VISAYAS",
+            "house": 4529083,
+            "increase": 93750,
+            "decrease": 0,
+            "net": 93750,
+            "senate": 4622833,
+            "sub_agencies": [
+              {
+                "code": "L.1",
+                "name": "Bohol Island State University",
+                "house": 969342,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1025592
+              },
+              {
+                "code": "L.2",
+                "name": "Cebu Normal University",
+                "house": 614751,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 652251
+              },
+              {
+                "code": "L.3",
+                "name": "Cebu Technological University",
+                "house": 2944990,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 2944990
+              }
+            ]
+          },
+          {
+            "code": "M.",
+            "name": "REGION VIII - EASTERN VISAYAS",
+            "house": 8744251,
+            "increase": 197750,
+            "decrease": 0,
+            "net": 197750,
+            "senate": 8942001,
+            "sub_agencies": [
+              {
+                "code": "M.1",
+                "name": "Biliran Province State University",
+                "house": 830326,
+                "increase": 2000,
+                "decrease": 0,
+                "net": 2000,
+                "senate": 832326
+              },
+              {
+                "code": "M.2",
+                "name": "Eastern Samar State University",
+                "house": 902760,
+                "increase": 25000,
+                "decrease": 0,
+                "net": 25000,
+                "senate": 927760
+              },
+              {
+                "code": "M.3",
+                "name": "Eastern Visayas State University",
+                "house": 956583,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1012833
+              },
+              {
+                "code": "M.4",
+                "name": "Leyte Normal University",
+                "house": 588943,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 626443
+              },
+              {
+                "code": "M.5",
+                "name": "Northwest Samar State University",
+                "house": 648278,
+                "increase": 39500,
+                "decrease": 0,
+                "net": 39500,
+                "senate": 687778
+              },
+              {
+                "code": "M.6",
+                "name": "Palompon Institute of Technology",
+                "house": 430659,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 468159
+              },
+              {
+                "code": "M.7",
+                "name": "Samar State University",
+                "house": 733775,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 733775
+              },
+              {
+                "code": "M.8",
+                "name": "Southern Leyte State University",
+                "house": 912287,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 912287
+              },
+              {
+                "code": "M.9",
+                "name": "University of Eastern Philippines",
+                "house": 1118288,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 1118288
+              },
+              {
+                "code": "M.10",
+                "name": "Visayas State University",
+                "house": 1622352,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 1622352
+              }
+            ]
+          },
+          {
+            "code": "N.",
+            "name": "REGION IX-ZAMBOANGA PENINSULA",
+            "house": 4092862,
+            "increase": 276000,
+            "decrease": 0,
+            "net": 276000,
+            "senate": 4368862,
+            "sub_agencies": [
+              {
+                "code": "N.1",
+                "name": "Basilan State College",
+                "house": 301318,
+                "increase": 17000,
+                "decrease": 0,
+                "net": 17000,
+                "senate": 318318
+              },
+              {
+                "code": "N.2",
+                "name": "J.H. Cerilles State College",
+                "house": 510175,
+                "increase": 134000,
+                "decrease": 0,
+                "net": 134000,
+                "senate": 644175
+              },
+              {
+                "code": "N.3",
+                "name": "Jose Rizal Memorial State University",
+                "house": 900741,
+                "increase": 42500,
+                "decrease": 0,
+                "net": 42500,
+                "senate": 943241
+              },
+              {
+                "code": "N.4",
+                "name": "Western Mindanao State University",
+                "house": 1354843,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 1392343
+              },
+              {
+                "code": "N.5",
+                "name": "Zamboanga Peninsula Polytechnic State University",
+                "house": 701320,
+                "increase": 22500,
+                "decrease": 0,
+                "net": 22500,
+                "senate": 723820
+              },
+              {
+                "code": "N.6",
+                "name": "Zamboanga State College of Marine Sciences and Technology",
+                "house": 324465,
+                "increase": 22500,
+                "decrease": 0,
+                "net": 22500,
+                "senate": 346965
+              }
+            ]
+          },
+          {
+            "code": "O",
+            "name": "REGION X - NORTHERN MINDANAO",
+            "house": 6508079,
+            "increase": 325640,
+            "decrease": 0,
+            "net": 325640,
+            "senate": 6833719,
+            "sub_agencies": [
+              {
+                "code": "O.1",
+                "name": "Bukidnon State University",
+                "house": 1040990,
+                "increase": 100000,
+                "decrease": 0,
+                "net": 100000,
+                "senate": 1140990
+              },
+              {
+                "code": "O.2",
+                "name": "Camiguin Polytechnic State College",
+                "house": 256989,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 294489
+              },
+              {
+                "code": "O.3",
+                "name": "Central Mindanao University",
+                "house": 1100307,
+                "increase": 66250,
+                "decrease": 0,
+                "net": 66250,
+                "senate": 1166557
+              },
+              {
+                "code": "O.4",
+                "name": "MSU-Iligan Institute of Technology",
+                "house": 1642584,
+                "increase": 18750,
+                "decrease": 0,
+                "net": 18750,
+                "senate": 1661334
+              },
+              {
+                "code": "O.5",
+                "name": "Northern Bukidnon State College",
+                "house": 270145,
+                "increase": 31890,
+                "decrease": 0,
+                "net": 31890,
+                "senate": 302035
+              },
+              {
+                "code": "O.6",
+                "name": "Northwestern Mindanao State College of Science and Technology",
+                "house": 485618,
+                "increase": 18750,
+                "decrease": 0,
+                "net": 18750,
+                "senate": 504368
+              },
+              {
+                "code": "O.7",
+                "name": "University of Science and Technology of Southern Philippines",
+                "house": 1711446,
+                "increase": 52500,
+                "decrease": 0,
+                "net": 52500,
+                "senate": 1763946
+              }
+            ]
+          },
+          {
+            "code": "P.",
+            "name": "REGION XI - DAVAO",
+            "house": 3100695,
+            "increase": 236750,
+            "decrease": 0,
+            "net": 236750,
+            "senate": 3337445,
+            "sub_agencies": [
+              {
+                "code": "P.1",
+                "name": "Davao de Oro State College",
+                "house": 399890,
+                "increase": 39500,
+                "decrease": 0,
+                "net": 39500,
+                "senate": 439390
+              },
+              {
+                "code": "P.2",
+                "name": "Davao del Norte State College",
+                "house": 505822,
+                "increase": 39500,
+                "decrease": 0,
+                "net": 39500,
+                "senate": 545322
+              },
+              {
+                "code": "P.3",
+                "name": "Davao del Sur State College",
+                "house": 360493,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 397993
+              },
+              {
+                "code": "P4",
+                "name": "Davao Oriental State University",
+                "house": 626478,
+                "increase": 43250,
+                "decrease": 0,
+                "net": 43250,
+                "senate": 669728
+              },
+              {
+                "code": "P.5",
+                "name": "Southern Philippines Agri-Business and Marine and Aquatic School of Technology",
+                "house": 236643,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 274143
+              },
+              {
+                "code": "P.6",
+                "name": "University of Southeastern Philippines",
+                "house": 971369,
+                "increase": 39500,
+                "decrease": 0,
+                "net": 39500,
+                "senate": 1010869
+              }
+            ]
+          },
+          {
+            "code": "Q",
+            "name": "REGION XII-SOCCSKSARGEN",
+            "house": 2268010,
+            "increase": 114750,
+            "decrease": 0,
+            "net": 114750,
+            "senate": 2382760,
+            "sub_agencies": [
+              {
+                "code": "Q.1",
+                "name": "Cotabato Foundation College of Science and Technology",
+                "house": 391515,
+                "increase": 36000,
+                "decrease": 0,
+                "net": 36000,
+                "senate": 427515
+              },
+              {
+                "code": "Q.2",
+                "name": "South Cotabato State College",
+                "house": 142884,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 142884
+              },
+              {
+                "code": "Q.3",
+                "name": "Sultan Kudarat State University",
+                "house": 674552,
+                "increase": 22500,
+                "decrease": 0,
+                "net": 22500,
+                "senate": 697052
+              },
+              {
+                "code": "Q.4",
+                "name": "University of Southern Mindanao",
+                "house": 1059059,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1115309
+              }
+            ]
+          },
+          {
+            "code": "R.",
+            "name": "REGION XIII - CARAGA",
+            "house": 3732453,
+            "increase": 187500,
+            "decrease": 0,
+            "net": 187500,
+            "senate": 3919953,
+            "sub_agencies": [
+              {
+                "code": "R.1",
+                "name": "Agusan del Sur State College of Agriculture and Technology",
+                "house": 514152,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 551652
+              },
+              {
+                "code": "R.2",
+                "name": "Caraga State University",
+                "house": 1145158,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1201408
+              },
+              {
+                "code": "R.3",
+                "name": "North Eastern Mindanao State University",
+                "house": 1380893,
+                "increase": 56250,
+                "decrease": 0,
+                "net": 56250,
+                "senate": 1437143
+              },
+              {
+                "code": "R.4",
+                "name": "Surigao del Norte State University",
+                "house": 692250,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 729750
+              }
+            ]
+          },
+          {
+            "code": "S.",
+            "name": "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANO (BARMM)",
+            "house": 8309718,
+            "increase": 316178,
+            "decrease": 0,
+            "net": 316178,
+            "senate": 8625896,
+            "sub_agencies": [
+              {
+                "code": "S.1",
+                "name": "Adiong Memorial State College",
+                "house": 147621,
+                "increase": 22500,
+                "decrease": 0,
+                "net": 22500,
+                "senate": 170121
+              },
+              {
+                "code": "S.2",
+                "name": "Cotabato State University",
+                "house": 377916,
+                "increase": 37500,
+                "decrease": 0,
+                "net": 37500,
+                "senate": 415416
+              },
+              {
+                "code": "S.3",
+                "name": "Mindanao State University",
+                "house": 6149612,
+                "increase": 107053,
+                "decrease": 0,
+                "net": 107053,
+                "senate": 6256665
+              },
+              {
+                "code": "S.4",
+                "name": "MSU-Tawi-Tawi College of Technology and Oceanography",
+                "house": 974853,
+                "increase": 39500,
+                "decrease": 0,
+                "net": 39500,
+                "senate": 1014353
+              },
+              {
+                "code": "S.5",
+                "name": "Sulu State College",
+                "house": 403771,
+                "increase": 79625,
+                "decrease": 0,
+                "net": 79625,
+                "senate": 483396
+              },
+              {
+                "code": "S.6",
+                "name": "Tawi-Tawi Regional Agricultural College",
+                "house": 255945,
+                "increase": 30000,
+                "decrease": 0,
+                "net": 30000,
+                "senate": 285945
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "X",
+        "name": "DEPARTMENT OF ENERGY",
+        "house": 2996211,
+        "increase": 0,
+        "decrease": 0,
+        "net": 0,
+        "senate": 2996211,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 2996211,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 2996211
+          }
+        ]
+      },
+      {
+        "code": "XI",
+        "name": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES",
+        "house": 28466122,
+        "increase": 207198,
+        "decrease": -1226642,
+        "net": -1019444,
+        "senate": 27446678,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 20813218,
+            "increase": 122963,
+            "decrease": -1226642,
+            "net": -1103679,
+            "senate": 19709539
+          },
+          {
+            "code": "B.",
+            "name": "Environmental Management Bureau",
+            "house": 3404856,
+            "increase": 60000,
+            "decrease": 0,
+            "net": 60000,
+            "senate": 3464856
+          },
+          {
+            "code": "C.",
+            "name": "Mines and Geosciences Bureau",
+            "house": 1836411,
+            "increase": 10000,
+            "decrease": 0,
+            "net": 10000,
+            "senate": 1846411
+          },
+          {
+            "code": "D.",
+            "name": "National Mapping and Resource Information Authority",
+            "house": 1968993,
+            "increase": 14235,
+            "decrease": 0,
+            "net": 14235,
+            "senate": 1983228
+          },
+          {
+            "code": "E",
+            "name": "National Water Resources Board",
+            "house": 294405,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 294405
+          },
+          {
+            "code": "F",
+            "name": "Palawan Council for Sustainable Development Staff",
+            "house": 148239,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 148239
+          }
+        ]
+      },
+      {
+        "code": "XII.",
+        "name": "DEPARTMENT OF FINANCE",
+        "house": 31001345,
+        "increase": 1258173,
+        "decrease": 0,
+        "net": 1258173,
+        "senate": 32259518,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 1278317,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1278317
+          },
+          {
+            "code": "B",
+            "name": "Bureau of Customs",
+            "house": 5462907,
+            "increase": 258173,
+            "decrease": 0,
+            "net": 258173,
+            "senate": 5721080
+          },
+          {
+            "code": "C.",
+            "name": "Bureau of Internal Revenue",
+            "house": 18338111,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 18338111
+          },
+          {
+            "code": "D.",
+            "name": "Bureau of Local Government Finance",
+            "house": 974023,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 974023
+          },
+          {
+            "code": "E",
+            "name": "Bureau of the Treasury",
+            "house": 4650643,
+            "increase": 1000000,
+            "decrease": 0,
+            "net": 1000000,
+            "senate": 5650643
+          },
+          {
+            "code": "F",
+            "name": "Central Board of Assessment Appeals",
+            "house": 17119,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 17119
+          },
+          {
+            "code": "G",
+            "name": "Insurance Commission",
+            "house": 6,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 6
+          },
+          {
+            "code": "H.",
+            "name": "National Tax Research Center",
+            "house": 145616,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 145616
+          },
+          {
+            "code": "I",
+            "name": "Privatization and Management Office",
+            "house": 134603,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 134603
+          }
+        ]
+      },
+      {
+        "code": "XIII.",
+        "name": "DEPARTMENT OF FOREIGN AFFAIRS",
+        "house": 29807959,
+        "increase": 69000,
+        "decrease": 0,
+        "net": 69000,
+        "senate": 29876959,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 29500263,
+            "increase": 69000,
+            "decrease": 0,
+            "net": 69000,
+            "senate": 29569263
+          },
+          {
+            "code": "B.",
+            "name": "Foreign Service Institute",
+            "house": 173147,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 173147
+          },
+          {
+            "code": "C.",
+            "name": "Presidential Commission on Visiting Forces",
+            "house": 51575,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 51575
+          },
+          {
+            "code": "D.",
+            "name": "Technical Cooperation Council of the Philippine:",
+            "house": 31560,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 31560
+          },
+          {
+            "code": "E",
+            "name": "UNESCO National Commission of the Philippines",
+            "house": 51414,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 51414
+          }
+        ]
+      },
+      {
+        "code": "XIV.",
+        "name": "DEPARTMENT OF HEALTH",
+        "house": 283179096,
+        "increase": 18063298,
+        "decrease": -31226429,
+        "net": -13163131,
+        "senate": 270015965,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 282811346,
+            "increase": 18063298,
+            "decrease": -31226429,
+            "net": -13163131,
+            "senate": 269648215
+          },
+          {
+            "code": "B.",
+            "name": "National Nutrition Council",
+            "house": 304546,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 304546
+          },
+          {
+            "code": "C.",
+            "name": "Philippine National AIDS Council",
+            "house": 63204,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 63204
+          }
+        ]
+      },
+      {
+        "code": "XV.",
+        "name": "DEPARTMENT OF HUMAN SETTLEMENTS AND URBAN DEVELOPMENT",
+        "house": 3090467,
+        "increase": 0,
+        "decrease": 0,
+        "net": -1143200,
+        "senate": 1947267,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 2563550,
+            "increase": 0,
+            "decrease": -1143200,
+            "net": -1143200,
+            "senate": 1420350
+          },
+          {
+            "code": "B.",
+            "name": "Human Settlements Adjudication Commission",
+            "house": 526917,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 526917
+          }
+        ]
+      },
+      {
+        "code": "XVI",
+        "name": "DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY",
+        "house": 14691023,
+        "increase": 2308863,
+        "decrease": -2115996,
+        "net": 192867,
+        "senate": 14883890,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 12961924,
+            "increase": 2308863,
+            "decrease": -2000000,
+            "net": 308863,
+            "senate": 13270787
+          },
+          {
+            "code": "B",
+            "name": "Cybercrime Investigation and Coordination Center",
+            "house": 573779,
+            "increase": 0,
+            "decrease": -115996,
+            "net": -115996,
+            "senate": 457783
+          },
+          {
+            "code": "C.",
+            "name": "National Privacy Commission",
+            "house": 428866,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 428866
+          },
+          {
+            "code": "D.",
+            "name": "National Telecommunications Commission",
+            "house": 726454,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 726454
+          }
+        ]
+      },
+      {
+        "code": "XVII.",
+        "name": "DEPARTMENT OF THE INTERIOR AND LOCAL GOVERNMENT",
+        "house": 285634492,
+        "increase": 26132860,
+        "decrease": -1683518,
+        "net": 24449342,
+        "senate": 310083834,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 8549126,
+            "increase": 1000000,
+            "decrease": 0,
+            "net": 1000000,
+            "senate": 9549126
+          },
+          {
+            "code": "B.",
+            "name": "Bureau of Fire Protection",
+            "house": 31714026,
+            "increase": 4520130,
+            "decrease": 0,
+            "net": 4520130,
+            "senate": 36234156
+          },
+          {
+            "code": "C.",
+            "name": "Bureau of Jail Management and Penology",
+            "house": 29253153,
+            "increase": 2070578,
+            "decrease": 0,
+            "net": 2070578,
+            "senate": 31323731
+          },
+          {
+            "code": "D.",
+            "name": "Early Childhood Care and Development Council",
+            "house": 356793,
+            "increase": 264758,
+            "decrease": -264758,
+            "net": 0,
+            "senate": 356793
+          },
+          {
+            "code": "E",
+            "name": "Local Government Academy",
+            "house": 540347,
+            "increase": 4500,
+            "decrease": 0,
+            "net": 4500,
+            "senate": 544847
+          },
+          {
+            "code": "F",
+            "name": "National Commission on Muslim Filipinos",
+            "house": 1166103,
+            "increase": 147500,
+            "decrease": 0,
+            "net": 147500,
+            "senate": 1313603
+          },
+          {
+            "code": "G",
+            "name": "National Police Commission",
+            "house": 2464605,
+            "increase": 1051,
+            "decrease": 0,
+            "net": 1051,
+            "senate": 2465656
+          },
+          {
+            "code": "H.",
+            "name": "National Youth Commission",
+            "house": 315469,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 315469
+          },
+          {
+            "code": "I.",
+            "name": "Philippine Commission on Women",
+            "house": 175894,
+            "increase": 29000,
+            "decrease": 0,
+            "net": 29000,
+            "senate": 204894
+          },
+          {
+            "code": "J.",
+            "name": "Philippine National Police",
+            "house": 209905288,
+            "increase": 18053543,
+            "decrease": -1418760,
+            "net": 16634783,
+            "senate": 226540071
+          },
+          {
+            "code": "K",
+            "name": "Philippine Public Safety College",
+            "house": 1193688,
+            "increase": 41800,
+            "decrease": 0,
+            "net": 41800,
+            "senate": 1235488
+          }
+        ]
+      },
+      {
+        "code": "XVIII",
+        "name": "DEPARTMENT OF JUSTICE",
+        "house": 41464238,
+        "increase": 2673289,
+        "decrease": 0,
+        "net": 2673289,
+        "senate": 44137527,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 10805023,
+            "increase": 1402622,
+            "decrease": 0,
+            "net": 1402622,
+            "senate": 12207645
+          },
+          {
+            "code": "B.",
+            "name": "Bureau of Corrections",
+            "house": 10230878,
+            "increase": 639068,
+            "decrease": 0,
+            "net": 639068,
+            "senate": 10869946
+          },
+          {
+            "code": "C.",
+            "name": "Bureau of Immigration",
+            "house": 5255705,
+            "increase": 494351,
+            "decrease": 0,
+            "net": 494351,
+            "senate": 5750056
+          },
+          {
+            "code": "D.",
+            "name": "Land Registration Authority",
+            "house": 1361033,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1361033
+          },
+          {
+            "code": "E.",
+            "name": "National Bureau of Investigation",
+            "house": 3687617,
+            "increase": 120000,
+            "decrease": 0,
+            "net": 120000,
+            "senate": 3807617
+          },
+          {
+            "code": "F",
+            "name": "Office for Alternative Dispute Resolution",
+            "house": 160581,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 160581
+          },
+          {
+            "code": "G.",
+            "name": "Office of the Government Corporate Counsel",
+            "house": 304017,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 304017
+          },
+          {
+            "code": "H.",
+            "name": "Office of the Solicitor General",
+            "house": 1742446,
+            "increase": 17248,
+            "decrease": 0,
+            "net": 17248,
+            "senate": 1759694
+          },
+          {
+            "code": "I",
+            "name": "Parole and Probation Administration",
+            "house": 1226908,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1226908
+          },
+          {
+            "code": "J",
+            "name": "Presidential Commission on Good Government",
+            "house": 275252,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 275252
+          },
+          {
+            "code": "K",
+            "name": "Public Attorney's Office",
+            "house": 6414778,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 6414778
+          }
+        ]
+      },
+      {
+        "code": "XIX",
+        "name": "DEPARTMENT OF LABOR AND EMPLOYMENT",
+        "house": 58142930,
+        "increase": 4900895,
+        "decrease": -12224025,
+        "net": -7323130,
+        "senate": 50819800,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 29427466,
+            "increase": 2425000,
+            "decrease": -10137000,
+            "net": -7712000,
+            "senate": 21715466
+          },
+          {
+            "code": "B.",
+            "name": "Institute for Labor Studies",
+            "house": 77904,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 77904
+          },
+          {
+            "code": "C.",
+            "name": "National Conciliation and Mediation Board",
+            "house": 371162,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 371162
+          },
+          {
+            "code": "D.",
+            "name": "National Labor Relations Commission",
+            "house": 1803038,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1803038
+          },
+          {
+            "code": "E.",
+            "name": "National Wages and Productivity Commission",
+            "house": 357063,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 357063
+          },
+          {
+            "code": "F",
+            "name": "Professional Regulation Commission",
+            "house": 2521636,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 2521636
+          },
+          {
+            "code": "G.",
+            "name": "Technical Education and Skills Development Authority",
+            "house": 23584661,
+            "increase": 2475895,
+            "decrease": -2087025,
+            "net": 388870,
+            "senate": 23973531
+          }
+        ]
+      },
+      {
+        "code": "XX",
+        "name": "DEPARTMENT OF MIGRANT WORKERS",
+        "house": 9776826,
+        "increase": 1300000,
+        "decrease": 0,
+        "net": 1300000,
+        "senate": 11076826,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 6026573,
+            "increase": 800000,
+            "decrease": 0,
+            "net": 800000,
+            "senate": 6826573
+          },
+          {
+            "code": "B",
+            "name": "Overseas Workers Welfare Administration",
+            "house": 3750253,
+            "increase": 500000,
+            "decrease": 0,
+            "net": 500000,
+            "senate": 4250253
+          }
+        ]
+      },
+      {
+        "code": "XXI.",
+        "name": "DEPARTMENT OF NATIONAL DEFENSE",
+        "house": 299422690,
+        "increase": 6450007,
+        "decrease": 0,
+        "net": 6450007,
+        "senate": 305872697,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary - Proper",
+            "house": 2341215,
+            "increase": 12780,
+            "decrease": 0,
+            "net": 12780,
+            "senate": 2353995
+          },
+          {
+            "code": "B",
+            "name": "Government Arsenal",
+            "house": 2716998,
+            "increase": 156407,
+            "decrease": 0,
+            "net": 156407,
+            "senate": 2873405
+          },
+          {
+            "code": "C.",
+            "name": "National Defense College of the Philippines",
+            "house": 310011,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 310011
+          },
+          {
+            "code": "D.",
+            "name": "Office of Civil Defense",
+            "house": 2561769,
+            "increase": 77000,
+            "decrease": 0,
+            "net": 77000,
+            "senate": 2638769
+          },
+          {
+            "code": "E",
+            "name": "Philippine Veterans Affairs Office (PVAO) - Proper",
+            "house": 1525447,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1525447
+          },
+          {
+            "code": "F.",
+            "name": "Veterans Memorial Medical Center",
+            "house": 3387246,
+            "increase": 300000,
+            "decrease": 0,
+            "net": 300000,
+            "senate": 3687246
+          },
+          {
+            "code": "G.",
+            "name": "Armed Forces of the Philippines",
+            "house": 286580004,
+            "increase": 5903820,
+            "decrease": 0,
+            "net": 5903820,
+            "senate": 292483824,
+            "sub_agencies": [
+              {
+                "code": "G.1",
+                "name": "Philippine Army (Land Forces)",
+                "house": 142766244,
+                "increase": 2395200,
+                "decrease": 0,
+                "net": 2395200,
+                "senate": 145161444
+              },
+              {
+                "code": "G.2",
+                "name": "Philippine Air Force (Air Forces)",
+                "house": 59357152,
+                "increase": 1277096,
+                "decrease": 0,
+                "net": 1277096,
+                "senate": 60634248
+              },
+              {
+                "code": "G.3",
+                "name": "Philippine Navy (Naval Forces)",
+                "house": 59548870,
+                "increase": 380500,
+                "decrease": 0,
+                "net": 380500,
+                "senate": 59929370
+              },
+              {
+                "code": "G.4",
+                "name": "General Headquarters, AFP and AFP-Wide Service Support Units (AFPWSSUS)",
+                "house": 24907738,
+                "increase": 1851024,
+                "decrease": 0,
+                "net": 1851024,
+                "senate": 26758762
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "XXII",
+        "name": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS",
+        "house": 624480842,
+        "increase": 54345851,
+        "decrease": -108340075,
+        "net": -53994224,
+        "senate": 570486618,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 624480842,
+            "increase": 54345851,
+            "decrease": -108340075,
+            "net": -53994224,
+            "senate": 570486618
+          }
+        ]
+      },
+      {
+        "code": "XXIII.",
+        "name": "DEPARTMENT OF SCIENCE AND TECHNOLOGY",
+        "house": 30130246,
+        "increase": 1613672,
+        "decrease": 0,
+        "net": 1613672,
+        "senate": 31743918,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 7923129,
+            "increase": 200000,
+            "decrease": 0,
+            "net": 200000,
+            "senate": 8123129
+          },
+          {
+            "code": "B.",
+            "name": "Advanced Science and Technology Institute",
+            "house": 400849,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 400849
+          },
+          {
+            "code": "C.",
+            "name": "Food and Nutrition Research Institute",
+            "house": 1127241,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1127241
+          },
+          {
+            "code": "D.",
+            "name": "Forest Products Research and Development Institute",
+            "house": 263463,
+            "increase": 23171,
+            "decrease": 0,
+            "net": 23171,
+            "senate": 286634
+          },
+          {
+            "code": "E.",
+            "name": "Industrial Technology Development Institute",
+            "house": 585922,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 585922
+          },
+          {
+            "code": "F",
+            "name": "Metals Industry Research and Development Center",
+            "house": 303255,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 303255
+          },
+          {
+            "code": "G.",
+            "name": "National Academy of Science and Technology",
+            "house": 171242,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 171242
+          },
+          {
+            "code": "H.",
+            "name": "National Research Council of the Philippines",
+            "house": 255523,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 255523
+          },
+          {
+            "code": "I",
+            "name": "Philippine Atmospheric, Geophysical and Astronomical Services Administration",
+            "house": 2127780,
+            "increase": 711000,
+            "decrease": 0,
+            "net": 711000,
+            "senate": 2838780
+          },
+          {
+            "code": "J",
+            "name": "Philippine Council for Agriculture, Aquatic and Natural Resource Research and Development",
+            "house": 1684721,
+            "increase": 825,
+            "decrease": 0,
+            "net": 825,
+            "senate": 1685546
+          },
+          {
+            "code": "K",
+            "name": "Philippine Council for Health Research and Development",
+            "house": 905406,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 905406
+          },
+          {
+            "code": "L",
+            "name": "Philippine Council for Industry, Energy and Emerging Technology Research and Development",
+            "house": 1080106,
+            "increase": 46400,
+            "decrease": 0,
+            "net": 46400,
+            "senate": 1126506
+          },
+          {
+            "code": "M.",
+            "name": "Philippine Institute of Volcanology and Seismology",
+            "house": 975496,
+            "increase": 81537,
+            "decrease": 0,
+            "net": 81537,
+            "senate": 1057033
+          },
+          {
+            "code": "N.",
+            "name": "Philippine Nuclear Research Institute",
+            "house": 887981,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 887981
+          },
+          {
+            "code": "O.",
+            "name": "Philippine Science High School System",
+            "house": 3054155,
+            "increase": 413874,
+            "decrease": 0,
+            "net": 413874,
+            "senate": 3468029
+          },
+          {
+            "code": "P",
+            "name": "Philippine Textile Research Institute",
+            "house": 361000,
+            "increase": 112500,
+            "decrease": 0,
+            "net": 112500,
+            "senate": 473500
+          },
+          {
+            "code": "Q",
+            "name": "Science Education Institute",
+            "house": 7599698,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 7599698
+          },
+          {
+            "code": "R.",
+            "name": "Science and Technology Information Institute",
+            "house": 170271,
+            "increase": 4365,
+            "decrease": 0,
+            "net": 4365,
+            "senate": 174636
+          },
+          {
+            "code": "S.",
+            "name": "Technology Application and Promotion Institute",
+            "house": 253008,
+            "increase": 20000,
+            "decrease": 0,
+            "net": 20000,
+            "senate": 273008
+          }
+        ]
+      },
+      {
+        "code": "XXIV.",
+        "name": "DEPARTMENT OF SOCIAL WELFARE AND DEVELOPMENT",
+        "house": 261297201,
+        "increase": 16117549,
+        "decrease": -32063000,
+        "net": -15945451,
+        "senate": 245351750,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 255854857,
+            "increase": 16074979,
+            "decrease": -32063000,
+            "net": -15988021,
+            "senate": 239866836
+          },
+          {
+            "code": "B",
+            "name": "Council for the Welfare of Children",
+            "house": 202625,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 202625
+          },
+          {
+            "code": "C.",
+            "name": "Juvenile Justice and Welfare Council",
+            "house": 133058,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 133058
+          },
+          {
+            "code": "D.",
+            "name": "National Anti-Poverty Commission",
+            "house": 369393,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 369393
+          },
+          {
+            "code": "E",
+            "name": "National Authority for Child Care",
+            "house": 721197,
+            "increase": 26270,
+            "decrease": 0,
+            "net": 26270,
+            "senate": 747467
+          },
+          {
+            "code": "F.",
+            "name": "National Commission of Senior Citizens",
+            "house": 3596953,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 3596953
+          },
+          {
+            "code": "G.",
+            "name": "National Council on Disability Affairs",
+            "house": 170916,
+            "increase": 16300,
+            "decrease": 0,
+            "net": 16300,
+            "senate": 187216
+          },
+          {
+            "code": "H.",
+            "name": "Presidential Commission for the Urban Poor",
+            "house": 248202,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 248202
+          }
+        ]
+      },
+      {
+        "code": "XXV.",
+        "name": "DEPARTMENT OF TOURISM",
+        "house": 3651214,
+        "increase": 585747,
+        "decrease": -78500,
+        "net": 507247,
+        "senate": 4158461,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 3137023,
+            "increase": 578500,
+            "decrease": -78500,
+            "net": 500000,
+            "senate": 3637023
+          },
+          {
+            "code": "B.",
+            "name": "Intramuros Administration",
+            "house": 155341,
+            "increase": 6000,
+            "decrease": 0,
+            "net": 6000,
+            "senate": 161341
+          },
+          {
+            "code": "C.",
+            "name": "National Parks Development Committee",
+            "house": 315559,
+            "increase": 1247,
+            "decrease": 0,
+            "net": 1247,
+            "senate": 316806
+          },
+          {
+            "code": "D.",
+            "name": "Philippine Commission on Sports Scuba Diving",
+            "house": 43291,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 43291
+          }
+        ]
+      },
+      {
+        "code": "XXVI.",
+        "name": "DEPARTMENT OF TRADE AND INDUSTRY",
+        "house": 9604643,
+        "increase": 812000,
+        "decrease": -475653,
+        "net": 336347,
+        "senate": 9940990,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 6977378,
+            "increase": 540848,
+            "decrease": 0,
+            "net": 540848,
+            "senate": 7518226
+          },
+          {
+            "code": "B.",
+            "name": "Board of Investments",
+            "house": 1041061,
+            "increase": 0,
+            "decrease": -475653,
+            "net": -475653,
+            "senate": 565408
+          },
+          {
+            "code": "C.",
+            "name": "Construction Industry Authority of the Philippines",
+            "house": 192832,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 192832
+          },
+          {
+            "code": "D.",
+            "name": "Cooperative Development Authority",
+            "house": 1088844,
+            "increase": 202000,
+            "decrease": 0,
+            "net": 202000,
+            "senate": 1290844
+          },
+          {
+            "code": "E",
+            "name": "Design Center of the Philippines",
+            "house": 200699,
+            "increase": 69152,
+            "decrease": 0,
+            "net": 69152,
+            "senate": 269851
+          },
+          {
+            "code": "F.",
+            "name": "Philippine Trade Training Center",
+            "house": 103829,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 103829
+          }
+        ]
+      },
+      {
+        "code": "XXVII.",
+        "name": "DEPARTMENT OF TRANSPORTATION",
+        "house": 174436414,
+        "increase": 16488014,
+        "decrease": -35301000,
+        "net": -18812986,
+        "senate": 155623428,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Office of the Secretary",
+            "house": 135572488,
+            "increase": 7770000,
+            "decrease": -35300000,
+            "net": -27530000,
+            "senate": 108042488
+          },
+          {
+            "code": "B.",
+            "name": "Civil Aeronautics Board",
+            "house": 262380,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 262380
+          },
+          {
+            "code": "C.",
+            "name": "Maritime Industry Authority",
+            "house": 1447423,
+            "increase": 30045,
+            "decrease": 0,
+            "net": 30045,
+            "senate": 1477468
+          },
+          {
+            "code": "D.",
+            "name": "Office of Transportation Cooperatives",
+            "house": 47304,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 47304
+          },
+          {
+            "code": "E",
+            "name": "Office for Transportation Security",
+            "house": 1156862,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1156862
+          },
+          {
+            "code": "F.",
+            "name": "Philippine Coast Guard",
+            "house": 35871307,
+            "increase": 8687969,
+            "decrease": -1000,
+            "net": 8686969,
+            "senate": 44558276
+          },
+          {
+            "code": "G",
+            "name": "Toll Regulatory Board",
+            "house": 78650,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 78650
+          }
+        ]
+      },
+      {
+        "code": "XXVIII.",
+        "name": "PRESIDENTIAL COMMUNICATIONS OFFICE",
+        "house": 2455915,
+        "increase": 0,
+        "decrease": 0,
+        "net": 0,
+        "senate": 2455915,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Presidential Communications Office (Proper)",
+            "house": 953935,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 953935
+          },
+          {
+            "code": "B.",
+            "name": "Bureau of Communications Services",
+            "house": 95698,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 95698
+          },
+          {
+            "code": "C.",
+            "name": "National Printing Office",
+            "house": 19628,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 19628
+          },
+          {
+            "code": "D.",
+            "name": "News and Information Bureau",
+            "house": 153604,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 153604
+          },
+          {
+            "code": "E.",
+            "name": "Philippine Information Agency",
+            "house": 501594,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 501594
+          },
+          {
+            "code": "F",
+            "name": "Presidential Broadcast Service-Bureau of Broadcast Services",
+            "house": 484337,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 484337
+          },
+          {
+            "code": "G",
+            "name": "Presidential Broadcast Staff (RTVM)",
+            "house": 247119,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 247119
+          }
+        ]
+      },
+      {
+        "code": "XXIX.",
+        "name": "OTHER EXECUTIVE OFFICES",
+        "house": 71167067,
+        "increase": 13806437,
+        "decrease": -2747530,
+        "net": 11058907,
+        "senate": 82225974,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Anti-Money Laundering Council",
+            "house": 170161,
+            "increase": 162941,
+            "decrease": 0,
+            "net": 162941,
+            "senate": 333102
+          },
+          {
+            "code": "B.",
+            "name": "Anti-Red Tape Authority",
+            "house": 478301,
+            "increase": 132610,
+            "decrease": 0,
+            "net": 132610,
+            "senate": 610911
+          },
+          {
+            "code": "C.",
+            "name": "Climate Change Commission",
+            "house": 183056,
+            "increase": 110179,
+            "decrease": 0,
+            "net": 110179,
+            "senate": 293235
+          },
+          {
+            "code": "D.",
+            "name": "Commission on Filipinos Overseas",
+            "house": 263267,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 263267
+          },
+          {
+            "code": "E",
+            "name": "Commission on Higher Education",
+            "house": 43570310,
+            "increase": 9153722,
+            "decrease": -2727746,
+            "net": 6425976,
+            "senate": 49996286
+          },
+          {
+            "code": "F.",
+            "name": "Commission on the Filipino Language",
+            "house": 113115,
+            "increase": 7000,
+            "decrease": 0,
+            "net": 7000,
+            "senate": 120115
+          },
+          {
+            "code": "G.",
+            "name": "Dangerous Drugs Board",
+            "house": 490085,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 490085
+          },
+          {
+            "code": "H.",
+            "name": "Energy Regulatory Commission",
+            "house": 877895,
+            "increase": 25600,
+            "decrease": 0,
+            "net": 25600,
+            "senate": 903495
+          },
+          {
+            "code": "I",
+            "name": "Film Development Council of the Philippines",
+            "house": 308486,
+            "increase": 58863,
+            "decrease": 0,
+            "net": 58863,
+            "senate": 367349
+          },
+          {
+            "code": "J.",
+            "name": "Games and Amusements Board",
+            "house": 151292,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 151292
+          },
+          {
+            "code": "K.",
+            "name": "Governance Commission for Government-Owned or Controlled Corporations",
+            "house": 377079,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 377079
+          },
+          {
+            "code": "L",
+            "name": "Marawi Compensation Board",
+            "house": 1213390,
+            "increase": 1000000,
+            "decrease": 0,
+            "net": 1000000,
+            "senate": 2213390
+          },
+          {
+            "code": "M.",
+            "name": "Metropolitan Baguio City, La Trinidad, Itogon, Sablan, Tuba, and Tublay Development Authority",
+            "house": 20156,
+            "increase": 4507,
+            "decrease": 0,
+            "net": 4507,
+            "senate": 24663
+          },
+          {
+            "code": "N.",
+            "name": "Mindanao Development Authority",
+            "house": 363409,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 363409
+          },
+          {
+            "code": "O.",
+            "name": "Movie and Television Review and Classification Board",
+            "house": 51997,
+            "increase": 23291,
+            "decrease": 0,
+            "net": 23291,
+            "senate": 75288
+          },
+          {
+            "code": "P.",
+            "name": "National Amnesty Commission",
+            "house": 217544,
+            "increase": 88000,
+            "decrease": 0,
+            "net": 88000,
+            "senate": 305544
+          },
+          {
+            "code": "Q.",
+            "name": "National Commission for Culture and the Arts",
+            "house": 1187774,
+            "increase": 772849,
+            "decrease": 0,
+            "net": 772849,
+            "senate": 1960623,
+            "sub_agencies": [
+              {
+                "code": "Q.1",
+                "name": "National Commission for Culture and the Arts (Proper)",
+                "house": 134240,
+                "increase": 641505,
+                "decrease": 0,
+                "net": 641505,
+                "senate": 775745
+              },
+              {
+                "code": "Q.2",
+                "name": "National Historical Commission of the Philippines",
+                "house": 552113,
+                "increase": 27500,
+                "decrease": 0,
+                "net": 27500,
+                "senate": 579613
+              },
+              {
+                "code": "Q.3",
+                "name": "National Library of the Philippines",
+                "house": 255786,
+                "increase": 45689,
+                "decrease": 0,
+                "net": 45689,
+                "senate": 301475
+              },
+              {
+                "code": "Q.4",
+                "name": "National Archives of the Philippines",
+                "house": 245635,
+                "increase": 58155,
+                "decrease": 0,
+                "net": 58155,
+                "senate": 303790
+              }
+            ]
+          },
+          {
+            "code": "R.",
+            "name": "National Commission on Indigenous Peoples",
+            "house": 1726625,
+            "increase": 100000,
+            "decrease": 0,
+            "net": 100000,
+            "senate": 1826625
+          },
+          {
+            "code": "S.",
+            "name": "National Intelligence Coordinating Agency",
+            "house": 2798424,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 2798424
+          },
+          {
+            "code": "T.",
+            "name": "National Security Council",
+            "house": 1235019,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1235019
+          },
+          {
+            "code": "U",
+            "name": "Office of the Presidential Adviser on Peace, Reconciliation and Unity",
+            "house": 7283437,
+            "increase": 850000,
+            "decrease": 0,
+            "net": 850000,
+            "senate": 8133437
+          },
+          {
+            "code": "V.",
+            "name": "Optical Media Board",
+            "house": 66816,
+            "increase": 0,
+            "decrease": -19784,
+            "net": -19784,
+            "senate": 47032
+          },
+          {
+            "code": "W.",
+            "name": "Philippine Competition Commission",
+            "house": 566508,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 566508
+          },
+          {
+            "code": "X.",
+            "name": "Philippine Drug Enforcement Agency",
+            "house": 4345135,
+            "increase": 26875,
+            "decrease": 0,
+            "net": 26875,
+            "senate": 4372010
+          },
+          {
+            "code": "Y.",
+            "name": "Philippine Racing Commission",
+            "house": 199765,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 199765
+          },
+          {
+            "code": "Z",
+            "name": "Philippine Space Agency",
+            "house": 1051900,
+            "increase": 85000,
+            "decrease": 0,
+            "net": 85000,
+            "senate": 1136900
+          },
+          {
+            "code": "AA.",
+            "name": "Philippine Sports Commission",
+            "house": 1001808,
+            "increase": 1205000,
+            "decrease": 0,
+            "net": 1205000,
+            "senate": 2206808
+          },
+          {
+            "code": "AB.",
+            "name": "Presidential Management Staff",
+            "house": 854313,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 854313
+          }
+        ]
+      },
+      {
+        "code": "XXX.",
+        "name": "THE JUDICIARY",
+        "house": 67227529,
+        "increase": 1424075,
+        "decrease": -217141,
+        "net": 1206934,
+        "senate": 68434463,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Supreme Court of the Philippines and the Lower Courts",
+            "house": 57726605,
+            "increase": 1035479,
+            "decrease": -217141,
+            "net": 818338,
+            "senate": 58544943
+          },
+          {
+            "code": "B",
+            "name": "Presidential Electoral Tribunal",
+            "house": 166802,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 166802
+          },
+          {
+            "code": "C.",
+            "name": "Sandiganbayan",
+            "house": 2513036,
+            "increase": 164933,
+            "decrease": 0,
+            "net": 164933,
+            "senate": 2677969
+          },
+          {
+            "code": "D.",
+            "name": "Court of Appeals",
+            "house": 5726091,
+            "increase": 223663,
+            "decrease": 0,
+            "net": 223663,
+            "senate": 5949754
+          },
+          {
+            "code": "E",
+            "name": "Court of Tax Appeals",
+            "house": 1094995,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1094995
+          }
+        ]
+      },
+      {
+        "code": "XXXI.",
+        "name": "CIVIL SERVICE COMMISSION",
+        "house": 4148042,
+        "increase": 0,
+        "decrease": 0,
+        "net": 0,
+        "senate": 4148042,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Civil Service Commission",
+            "house": 4045289,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 4045289
+          },
+          {
+            "code": "B",
+            "name": "Career Executive Service Board",
+            "house": 102753,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 102753
+          }
+        ]
+      },
+      {
+        "code": "XXXII.",
+        "name": "COMMISSION ON AUDIT",
+        "house": 14044887,
+        "increase": 2370460,
+        "decrease": 0,
+        "net": 2370460,
+        "senate": 16415347
+      },
+      {
+        "code": "XXXIII.",
+        "name": "COMMISSION ON ELECTIONS",
+        "house": 18991340,
+        "increase": 3803620,
+        "decrease": -2593936,
+        "net": 1209684,
+        "senate": 20201024
+      },
+      {
+        "code": "XXXIV.",
+        "name": "OFFICE OF THE OMBUDSMAN",
+        "house": 6511251,
+        "increase": 0,
+        "decrease": 0,
+        "net": 0,
+        "senate": 6511251
+      },
+      {
+        "code": "XXXV",
+        "name": "COMMISSION ON HUMAN RIGHTS",
+        "house": 1357267,
+        "increase": 0,
+        "decrease": 0,
+        "net": 0,
+        "senate": 1357267,
+        "agencies": [
+          {
+            "code": "A",
+            "name": "Commission on Human Rights",
+            "house": 1294763,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1294763
+          },
+          {
+            "code": "B.",
+            "name": "Human Rights Violations Victims' Memorial Commission",
+            "house": 62504,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 62504
+          }
+        ]
+      }
+    ],
+    "SPECIAL_PURPOSE_FUNDS": [
+      {
+        "code": "XXXVI.",
+        "name": "BUDGETARY SUPPORT TO GOVERNMENT CORPORATIONS",
+        "house": 238794374,
+        "increase": 19697865,
+        "decrease": -17975303,
+        "net": 1722562,
+        "senate": 240516936,
+        "corporations": [
+          {
+            "code": "A",
+            "name": "DEPARTMENT OF AGRICULTURE",
+            "house": 29964932,
+            "increase": 2847977,
+            "decrease": -6593236,
+            "net": -3745259,
+            "senate": 26219673,
+            "sub_corporations": [
+              {
+                "code": "A.1",
+                "name": "National Dairy Authority",
+                "house": 531016,
+                "increase": 1847977,
+                "decrease": 0,
+                "net": 1847977,
+                "senate": 2378993
+              },
+              {
+                "code": "A.2",
+                "name": "National Food Authority",
+                "house": 15484764,
+                "increase": 0,
+                "decrease": -4193236,
+                "net": -4193236,
+                "senate": 11291528
+              },
+              {
+                "code": "A.3",
+                "name": "Philippine Coconut Authority",
+                "house": 1919320,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 1919320
+              },
+              {
+                "code": "A.4",
+                "name": "Philippine Crop Insurance Corporation",
+                "house": 5500000,
+                "increase": 1000000,
+                "decrease": 0,
+                "net": 1000000,
+                "senate": 6500000
+              },
+              {
+                "code": "A.5",
+                "name": "Philippine Fisheries Development Authority",
+                "house": 4530000,
+                "increase": 0,
+                "decrease": -2400000,
+                "net": -2400000,
+                "senate": 2130000
+              },
+              {
+                "code": "A.6",
+                "name": "Philippine Rice Research Institute",
+                "house": 979832,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 979832
+              },
+              {
+                "code": "A.7",
+                "name": "Sugar Regulatory Administration",
+                "house": 1020000,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 1020000
+              }
+            ]
+          },
+          {
+            "code": "B.",
+            "name": "DEPARTMENT OF ECONOMY, PLANNING AND DEVELOPMENT",
+            "house": 1291488,
+            "increase": 176500,
+            "decrease": 0,
+            "net": 176500,
+            "senate": 1467988,
+            "sub_corporations": [
+              {
+                "code": "B.1",
+                "name": "Development Academy of the Philippines",
+                "house": 923455,
+                "increase": 176500,
+                "decrease": 0,
+                "net": 176500,
+                "senate": 1099955
+              },
+              {
+                "code": "B.2",
+                "name": "Philippine Institute for Development Studies",
+                "house": 368033,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 368033
+              }
+            ]
+          },
+          {
+            "code": "C.",
+            "name": "DEPARTMENT OF ENERGY",
+            "house": 10378577,
+            "increase": 1704000,
+            "decrease": 0,
+            "net": 1704000,
+            "senate": 12082577,
+            "sub_corporations": [
+              {
+                "code": "C.1",
+                "name": "National Electrification Administration",
+                "house": 8819200,
+                "increase": 1315000,
+                "decrease": 0,
+                "net": 1315000,
+                "senate": 10134200
+              },
+              {
+                "code": "C.2",
+                "name": "National Power Corporation",
+                "house": 1559377,
+                "increase": 389000,
+                "decrease": 0,
+                "net": 389000,
+                "senate": 1948377
+              }
+            ]
+          },
+          {
+            "code": "D.",
+            "name": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES",
+            "house": 236597,
+            "increase": 0,
+            "decrease": -29550,
+            "net": -29550,
+            "senate": 207047,
+            "sub_corporations": [
+              {
+                "code": "D.1",
+                "name": "Local Water Utilities Administration",
+                "house": 29550,
+                "increase": 0,
+                "decrease": -29550,
+                "net": -29550,
+                "senate": 0
+              },
+              {
+                "code": "D.2",
+                "name": "Metropolitan Waterworks and Sewerage System - Regulatory Office",
+                "house": 207047,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 207047
+              }
+            ]
+          },
+          {
+            "code": "E.",
+            "name": "DEPARTMENT OF FINANCE",
+            "house": 58227,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 58227,
+            "sub_corporations": [
+              {
+                "code": "E.1",
+                "name": "Philippine Tax Academy",
+                "house": 58227,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 58227
+              }
+            ]
+          },
+          {
+            "code": "F.",
+            "name": "DEPARTMENT OF HEALTH",
+            "house": 120098557,
+            "increase": 6920220,
+            "decrease": 0,
+            "net": 6920220,
+            "senate": 127018777,
+            "sub_corporations": [
+              {
+                "code": "F.1",
+                "name": "Lung Center of the Philippines",
+                "house": 918790,
+                "increase": 1830000,
+                "decrease": 0,
+                "net": 1830000,
+                "senate": 2748790
+              },
+              {
+                "code": "F.2",
+                "name": "National Kidney and Transplant Institute",
+                "house": 1512329,
+                "increase": 1700000,
+                "decrease": 0,
+                "net": 1700000,
+                "senate": 3212329
+              },
+              {
+                "code": "F.3",
+                "name": "Philippine Children's Medical Center",
+                "house": 1807594,
+                "increase": 1695000,
+                "decrease": 0,
+                "net": 1695000,
+                "senate": 3502594
+              },
+              {
+                "code": "F.4",
+                "name": "Philippine Health Insurance Corporation",
+                "house": 113261930,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 113261930
+              },
+              {
+                "code": "F.5",
+                "name": "Philippine Heart Center",
+                "house": 2423665,
+                "increase": 1663050,
+                "decrease": 0,
+                "net": 1663050,
+                "senate": 4086715
+              },
+              {
+                "code": "F.6",
+                "name": "Philippine Institute of Traditional Alternative Health Care",
+                "house": 174249,
+                "increase": 32170,
+                "decrease": 0,
+                "net": 32170,
+                "senate": 206419
+              }
+            ]
+          },
+          {
+            "code": "G.",
+            "name": "DEPARTMENT OF HUMAN SETTLEMENTS AND URBAN DEVELOPMENT",
+            "house": 2961352,
+            "increase": 1767450,
+            "decrease": -450,
+            "net": 1767000,
+            "senate": 4728352,
+            "sub_corporations": [
+              {
+                "code": "G.1",
+                "name": "National Home Mortgage Finance Corporation",
+                "house": 450,
+                "increase": 1767450,
+                "decrease": -450,
+                "net": 1767000,
+                "senate": 4562272
+              },
+              {
+                "code": "G.2",
+                "name": "National Housing Authority",
+                "house": 2794822,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 4562272
+              },
+              {
+                "code": "G.3",
+                "name": "Social Housing Finance Corporation",
+                "house": 166080,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 166080
+              }
+            ]
+          },
+          {
+            "code": "H.",
+            "name": "DEPARTMENT OF TOURISM",
+            "house": 0,
+            "increase": 276000,
+            "decrease": 0,
+            "net": 276000,
+            "senate": 276000,
+            "sub_corporations": [
+              {
+                "code": "H.1",
+                "name": "Tourism Infrastructure and Enterprise Zone Authority",
+                "house": 0,
+                "increase": 248000,
+                "decrease": 0,
+                "net": 248000,
+                "senate": 248000
+              },
+              {
+                "code": "H.2",
+                "name": "Tourism Promotions Board",
+                "house": 0,
+                "increase": 28000,
+                "decrease": 0,
+                "net": 28000,
+                "senate": 28000
+              }
+            ]
+          },
+          {
+            "code": "I",
+            "name": "DEPARTMENT OF TRADE AND INDUSTRY",
+            "house": 2473827,
+            "increase": 119080,
+            "decrease": 0,
+            "net": 119080,
+            "senate": 2592907,
+            "sub_corporations": [
+              {
+                "code": "I.1",
+                "name": "Aurora Pacific Economic Zone and Freeport Authority",
+                "house": 262455,
+                "increase": 119080,
+                "decrease": 0,
+                "net": 119080,
+                "senate": 381535
+              },
+              {
+                "code": "I.2",
+                "name": "Center for International Trade Expositions and Missions",
+                "house": 711372,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 711372
+              },
+              {
+                "code": "I.3",
+                "name": "Small Business Corporation",
+                "house": 1500000,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 1500000
+              }
+            ]
+          },
+          {
+            "code": "J",
+            "name": "DEPARTMENT OF TRANSPORTATION",
+            "house": 1268658,
+            "increase": 803860,
+            "decrease": 0,
+            "net": 803860,
+            "senate": 2072518,
+            "sub_corporations": [
+              {
+                "code": "J.1",
+                "name": "Light Rail Transit Authority",
+                "house": 917036,
+                "increase": 303860,
+                "decrease": 0,
+                "net": 303860,
+                "senate": 1220896
+              },
+              {
+                "code": "J.2",
+                "name": "Philippine National Railways",
+                "house": 351622,
+                "increase": 500000,
+                "decrease": 0,
+                "net": 500000,
+                "senate": 851622
+              }
+            ]
+          },
+          {
+            "code": "K",
+            "name": "PRESIDENTIAL COMMUNICATIONS OFFICE",
+            "house": 258764,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 258764,
+            "sub_corporations": [
+              {
+                "code": "K.1",
+                "name": "Intercontinental Broadcasting Corporation",
+                "house": 122000,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 122000
+              },
+              {
+                "code": "K.2",
+                "name": "People's Television Network, Incorporated",
+                "house": 136764,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 136764
+              }
+            ]
+          },
+          {
+            "code": "L",
+            "name": "OTHER EXECUTIVE OFFICES",
+            "house": 69774789,
+            "increase": 5082778,
+            "decrease": -11352067,
+            "net": -6269289,
+            "senate": 63505500,
+            "sub_corporations": [
+              {
+                "code": "L.1",
+                "name": "Authority of the Freeport Area of Bataan",
+                "house": 250000,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 250000
+              },
+              {
+                "code": "L.2",
+                "name": "Bases Conversion Development Authority",
+                "house": 2787175,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 2787175
+              },
+              {
+                "code": "L.3",
+                "name": "Cagayan Economic Zone Authority",
+                "house": 1095231,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 1095231
+              },
+              {
+                "code": "L.4",
+                "name": "Cultural Center of the Philippines",
+                "house": 408617,
+                "increase": 346900,
+                "decrease": 0,
+                "net": 346900,
+                "senate": 755517
+              },
+              {
+                "code": "L.5",
+                "name": "National Irrigation Administration",
+                "house": 63328357,
+                "increase": 4123378,
+                "decrease": -11352067,
+                "net": -7228689,
+                "senate": 56099668
+              },
+              {
+                "code": "L.6",
+                "name": "Philippine Center for Economic Development",
+                "house": 109264,
+                "increase": 12500,
+                "decrease": 0,
+                "net": 12500,
+                "senate": 121764
+              },
+              {
+                "code": "L.7",
+                "name": "Philippine Postal Corporation",
+                "house": 858465,
+                "increase": 525000,
+                "decrease": 0,
+                "net": 525000,
+                "senate": 1383465
+              },
+              {
+                "code": "L.8",
+                "name": "Southern Philippines Development Authority",
+                "house": 83029,
+                "increase": 75000,
+                "decrease": 0,
+                "net": 75000,
+                "senate": 158029
+              },
+              {
+                "code": "L.9",
+                "name": "Subic Bay Metropolitan Authority",
+                "house": 500000,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 500000
+              },
+              {
+                "code": "L.10",
+                "name": "Zamboanga City Special Economic Zone Authority",
+                "house": 354651,
+                "increase": 0,
+                "decrease": 0,
+                "net": 0,
+                "senate": 354651
+              }
+            ]
+          },
+          {
+            "code": "M.",
+            "name": "BUDGETARY SUPPORT TO GOVERNMENT CORPORATIONS - OTHERS",
+            "house": 28606,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 28606
+          }
+        ]
+      },
+      {
+        "code": "XXXVII.",
+        "name": "ALLOCATIONS TO LOCAL GOVERNMENT UNITS",
+        "house": 69838154,
+        "increase": 20509718,
+        "decrease": -1050000,
+        "net": 19459718,
+        "senate": 89297872,
+        "allocations": [
+          {
+            "code": "A",
+            "name": "Metropolitan Manila Development Authority",
+            "house": 5877103,
+            "increase": 1600000,
+            "decrease": 0,
+            "net": 1600000,
+            "senate": 7477103
+          },
+          {
+            "code": "B",
+            "name": "Special Shares of LGUs in the Proceeds of National Taxes",
+            "house": 31724961,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 31724961
+          },
+          {
+            "code": "C.",
+            "name": "Local Government Support Fund",
+            "house": 20190272,
+            "increase": 18909718,
+            "decrease": -1000000,
+            "net": 17909718,
+            "senate": 38099990
+          },
+          {
+            "code": "D.",
+            "name": "Special Shares of LGUs in the Proceeds of Fire Code Fees",
+            "house": 1405731,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 1405731
+          },
+          {
+            "code": "E",
+            "name": "Barangay Officials Death Benefits",
+            "house": 50000,
+            "increase": 0,
+            "decrease": -50000,
+            "net": -50000,
+            "senate": 0
+          },
+          {
+            "code": "F.",
+            "name": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+            "house": 10590087,
+            "increase": 0,
+            "decrease": 0,
+            "net": 0,
+            "senate": 10590087
+          }
+        ]
+      },
+      {
+        "code": "XXXVIII.",
+        "name": "CONTINGENT FUND",
+        "house": 13000000,
+        "increase": 0,
+        "decrease": 0,
+        "net": 0,
+        "senate": 13000000
+      },
+      {
+        "code": "XXXIX.",
+        "name": "MISCELLANEOUS PERSONNEL BENEFITS FUND",
+        "house": 111517037,
+        "increase": 0,
+        "decrease": -55029070,
+        "net": -55029070,
+        "senate": 56487967
+      },
+      {
+        "code": "XL",
+        "name": "NATIONAL DISASTER RISK REDUCTION AND MANAGEMENT FUND",
+        "house": 29250000,
+        "increase": 15330000,
+        "decrease": -510000,
+        "net": 14820000,
+        "senate": 44070000
+      },
+      {
+        "code": "XLI",
+        "name": "PENSION AND GRATUITY FUND",
+        "house": 197991283,
+        "increase": 0,
+        "decrease": -6472522,
+        "net": -6472522,
+        "senate": 191518761
+      },
+      {
+        "code": "XLII.",
+        "name": "REVISED AFP MODERNIZATION PROGRAM",
+        "house": 40000000,
+        "increase": 20000000,
+        "decrease": 0,
+        "net": 20000000,
+        "senate": 60000000
+      }
+    ],
+    "BUDGETS_OF_DOE_ATTACHED_CORPORATIONS": [
+      {
+        "code": "I.",
+        "name": "National Electrification Administration",
+        "house": 11844417,
+        "increase": 1315000,
+        "decrease": 0,
+        "net": 1315000,
+        "senate": 13159417
+      },
+      {
+        "code": "II.",
+        "name": "National Power Corporation",
+        "house": 42511312,
+        "increase": 389000,
+        "decrease": 0,
+        "net": 389000,
+        "senate": 42900312
+      },
+      {
+        "code": "III.",
+        "name": "Philippine National Oil Company",
+        "house": 5809241,
+        "increase": 480480,
+        "decrease": -4415962,
+        "net": -3935482,
+        "senate": 1873759
+      }
+    ]
+  }
+}

@@ -20,7 +20,7 @@ function App() {
   const [levelFilter, setLevelFilter] = useState<string>('');
 
   useEffect(() => {
-    fetch('/2026.csv')
+    fetch('/2026-3rd.csv')
       .then(response => response.text())
       .then(csv => {
         Papa.parse<BudgetData>(csv, {
