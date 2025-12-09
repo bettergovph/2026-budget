@@ -35,8 +35,8 @@ export function DataTable({ data, oldData }: DataTableProps) {
   };
 
   // Component to render a cell with current value and old value below
-  const ValueCell = ({ row, field, className = '', isBold = false }: { 
-    row: BudgetData; 
+  const ValueCell = ({ row, field, className = '', isBold = false }: {
+    row: BudgetData;
     field: 'Senate' | 'House' | 'Increase' | 'Decrease' | 'Net';
     className?: string;
     isBold?: boolean;
@@ -44,16 +44,15 @@ export function DataTable({ data, oldData }: DataTableProps) {
     const currentValue = row[field] * 1000;
     const oldValue = getOldValue(row, field);
     const hasChanged = oldValue !== null && oldValue !== row[field];
-    
+
     return (
       <TableCell className={`text-right font-mono py-2 sm:py-4 ${className}`}>
         <div className={`text-xs sm:text-sm ${isBold ? 'font-bold' : ''}`}>
           {formatCurrency(currentValue)}
         </div>
         {oldValue !== null && (
-          <div className={`text-[9px] sm:text-[10px] mt-0.5 ${
-            hasChanged ? 'text-gray-500' : 'text-gray-400'
-          }`}>
+          <div className={`text-[9px] sm:text-[10px] mt-0.5 ${hasChanged ? 'text-gray-500' : 'text-gray-400'
+            }`}>
             {hasChanged && (
               <span className="mr-1">
                 {currentValue > (oldValue * 1000) ? '↑' : currentValue < (oldValue * 1000) ? '↓' : '='}

@@ -36,7 +36,7 @@ function App() {
             setData(results.data);
           },
         });
-        
+
         // Parse old data
         Papa.parse<BudgetData>(csvOld, {
           header: true,
@@ -315,7 +315,7 @@ function App() {
         <CardHeader className="p-3 sm:p-6">
           <CardTitle className="text-lg sm:text-2xl">Budget Data Table - 3rd Reading</CardTitle>
           <CardDescription className="text-xs sm:text-sm">
-            Complete budget data with filtering and sorting capabilities. Showing 3rd reading numbers with previous amounts below. All amounts in thousand pesos.
+            Complete budget data with filtering and sorting capabilities. Showing 3rd reading numbers with small prints below as the 2nd reading. All amounts in thousand pesos.
           </CardDescription>
         </CardHeader>
         <CardContent className="p-2 sm:p-6">
