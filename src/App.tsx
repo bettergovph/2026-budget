@@ -4,6 +4,7 @@ import Papa from 'papaparse';
 import { BudgetData } from '@/types/budget';
 import { Charts } from '@/components/Charts';
 import { DataTable } from '@/components/DataTable';
+import { CitizensReport } from '@/components/CitizensReport';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 import { formatCurrency } from '@/lib/utils';
@@ -338,6 +339,7 @@ function App() {
         <Routes>
           <Route path="/" element={<DashboardView />} />
           <Route path="/table" element={<TableViewPage />} />
+          <Route path="/citizens-report" element={<CitizensReport />} />
         </Routes>
       </Layout>
     </Router>

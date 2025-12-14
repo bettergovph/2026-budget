@@ -68,15 +68,22 @@ export function Layout({
                   Table View
                 </Link>
                 <Link
-                  to="https://docs.google.com/presentation/d/1FRd1Q_Xh8kOZjASWA607GHERE23AHd-oKEsUW2UE3W0/edit?slide=id.p#slide=id.p"
-                  target="_blank"
-                  className={`text-md font-bold transition-colors ${location.pathname === '/citizen-report'
+                  to="/citizens-report"
+                  className={`text-md font-bold transition-colors ${location.pathname === '/citizens-report'
                     ? 'text-blue-600 underline'
                     : 'text-black hover:text-gray-900 hover:underline'
                     }`}
                 >
-                  Citizen's Analysis & Report
+                  Citizens' Report
                 </Link>
+                <a
+                  href="https://docs.google.com/presentation/d/1FRd1Q_Xh8kOZjASWA607GHERE23AHd-oKEsUW2UE3W0/edit?slide=id.p#slide=id.p"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-md font-bold text-black hover:text-gray-900 hover:underline transition-colors"
+                >
+                  Citizens' Analysis ↗
+                </a>
               </div>
               <div className="flex gap-6">
                 <a
@@ -167,15 +174,23 @@ export function Layout({
                   Table View
                 </Link>
                 <Link
-                  to="https://docs.google.com/presentation/d/1FRd1Q_Xh8kOZjASWA607GHERE23AHd-oKEsUW2UE3W0/edit?slide=id.p#slide=id.p"
-                  target="_blank"
-                  className={`text-md font-bold transition-colors ${location.pathname === '/citizen-report'
-                    ? 'text-blue-600 underline'
-                    : 'text-black hover:text-gray-900 hover:underline'
+                  to="/citizens-report"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`text-base font-medium py-2 transition-colors ${location.pathname === '/citizens-report'
+                    ? 'text-blue-600 font-bold'
+                    : 'text-gray-600 hover:text-gray-900'
                     }`}
                 >
-                  Citizen's Analysis & Report
+                  Citizens' Report
                 </Link>
+                <a
+                  href="https://docs.google.com/presentation/d/1FRd1Q_Xh8kOZjASWA607GHERE23AHd-oKEsUW2UE3W0/edit?slide=id.p#slide=id.p"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base font-medium text-gray-600 hover:text-gray-900 py-2"
+                >
+                  Citizens' Analysis ↗
+                </a>
                 <a
                   href="https://budget.bettergov.ph"
                   target="_blank"
