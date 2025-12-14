@@ -67,6 +67,16 @@ export function Layout({
                 >
                   Table View
                 </Link>
+                <Link
+                  to="https://docs.google.com/presentation/d/1FRd1Q_Xh8kOZjASWA607GHERE23AHd-oKEsUW2UE3W0/edit?slide=id.p#slide=id.p"
+                  target="_blank"
+                  className={`text-md font-bold transition-colors ${location.pathname === '/citizen-report'
+                    ? 'text-blue-600 underline'
+                    : 'text-black hover:text-gray-900 hover:underline'
+                    }`}
+                >
+                  Citizen's Analysis & Report
+                </Link>
               </div>
               <div className="flex gap-6">
                 <a
@@ -155,6 +165,16 @@ export function Layout({
                     }`}
                 >
                   Table View
+                </Link>
+                <Link
+                  to="https://docs.google.com/presentation/d/1FRd1Q_Xh8kOZjASWA607GHERE23AHd-oKEsUW2UE3W0/edit?slide=id.p#slide=id.p"
+                  target="_blank"
+                  className={`text-md font-bold transition-colors ${location.pathname === '/citizen-report'
+                    ? 'text-blue-600 underline'
+                    : 'text-black hover:text-gray-900 hover:underline'
+                    }`}
+                >
+                  Citizen's Analysis & Report
                 </Link>
                 <a
                   href="https://budget.bettergov.ph"
